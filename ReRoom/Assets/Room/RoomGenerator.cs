@@ -8,6 +8,7 @@ public class RoomGenerator : MonoBehaviour
     [SerializeField] GameObject m_roomPrefab;
 
     private const int RoomWidth = 16;
+    private const int MaxRoomNum = 3;
 
     private int m_createIndex;
 
@@ -31,7 +32,7 @@ public class RoomGenerator : MonoBehaviour
         m_createIndex++;
 
         //ŒÃ‚¢•”‰®‚ðíœ
-        if (m_createIndex > 3)
+        if (m_createIndex > MaxRoomNum)
         {
             Destroy(transform.GetChild(0).gameObject);
         }
