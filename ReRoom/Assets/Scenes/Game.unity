@@ -871,7 +871,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 524d2ec099789bb489603f3fdba471ee, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.6
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1853,6 +1853,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_bulletEffect
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7178919517325571757, guid: 61de9b1dffe816f40904601e2929b7c6,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
