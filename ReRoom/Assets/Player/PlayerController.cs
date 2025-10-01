@@ -7,11 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] float m_moveSpeed;         //移動速度
     [SerializeField] float m_jumpPower;         //ジャンプ力
-
     [SerializeField] GameObject m_revolver;     //銃のモデル
-
-    [SerializeField] GameObject m_playerHead; 
-    [SerializeField] CinemachineVirtualCamera m_virtualCamera; 
+    [SerializeField] CinemachineVirtualCamera m_virtualCamera; //カメラ
 
     private CharacterController m_characterController;
     private PlayerInput m_playerInput;
@@ -23,14 +20,17 @@ public class PlayerController : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
 
+        //コンポーネントの取得
         m_characterController = GetComponent<CharacterController>();
         m_playerInput = GetComponent<PlayerInput>();
     }
 
     private void FixedUpdate()
     {
+        //移動
         Move();
 
+        //重力
         m_inputValue.y += Physics.gravity.y * Time.deltaTime;
     }
 
@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
         //カメラの中央からRayを飛ばす
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out var hit))
         {
-            m_revolver.GetComponent<RevolverController>().Shot();
+            m_revolver.GetComponent<RevolverController>().Shot(hit.point);
         }
     }
 
@@ -92,12 +92,8 @@ public class PlayerController : MonoBehaviour
 
         //カメラの回転量を取得
         float yaw = m_virtualCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.Value;
-        float pitch = m_virtualCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.Value;
 
         //プレイヤーを左右に回転
         transform.rotation = Quaternion.Euler(0, yaw, 0);
-
-        //頭を上下に回転
-        m_playerHead.transform.localRotation = Quaternion.Euler(pitch, 0, 0);
     }
 }
