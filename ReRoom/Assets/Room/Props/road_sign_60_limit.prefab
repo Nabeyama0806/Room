@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5132360881518704669}
   m_Layer: 0
   m_Name: road_sign_60_limit
-  m_TagString: Untagged
+  m_TagString: Props
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

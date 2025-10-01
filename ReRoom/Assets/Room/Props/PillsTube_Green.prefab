@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -7266184807053022446}
   m_Layer: 0
   m_Name: PillsTube_Green
-  m_TagString: Untagged
+  m_TagString: Props
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

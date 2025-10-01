@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2101763164795777621}
   m_Layer: 0
   m_Name: PillsTubeRed
-  m_TagString: Untagged
+  m_TagString: Props
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

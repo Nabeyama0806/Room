@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 6764057431145550329}
   - component: {fileID: 3437554349500739658}
   - component: {fileID: 8963233176550398992}
+  - component: {fileID: 3769804792689632135}
+  - component: {fileID: 110172743914624470}
   m_Layer: 0
   m_Name: ceramic_sink
-  m_TagString: Untagged
+  m_TagString: Props
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -103,5 +105,49 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 69.54317, y: 140.58652, z: 68.39061}
-  m_Center: {x: 0, y: 70.29326, z: 0}
+  m_Size: {x: 70, y: 35, z: 15}
+  m_Center: {x: 0, y: 125, z: -28}
+--- !u!65 &3769804792689632135
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6106422112304352960}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 65, y: 20, z: 65}
+  m_Center: {x: 0, y: 115, z: 0}
+--- !u!136 &110172743914624470
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6106422112304352960}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 8
+  m_Height: 110
+  m_Direction: 1
+  m_Center: {x: 0, y: 55, z: -15}
