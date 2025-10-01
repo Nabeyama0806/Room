@@ -7,12 +7,15 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] float m_moveSpeed;         //移動速度
     [SerializeField] float m_jumpPower;         //ジャンプ力
-    [SerializeField] AudioClip m_bulletShot;    //射撃音
+
+    [SerializeField] GameObject m_revolver;     //銃のモデル
+
+    [SerializeField] GameObject m_playerHead; 
+    [SerializeField] CinemachineVirtualCamera m_virtualCamera; 
 
     private CharacterController m_characterController;
     private PlayerInput m_playerInput;
     private Vector3 m_inputValue;   
-
 
     void Awake()
     {
@@ -22,6 +25,13 @@ public class PlayerController : MonoBehaviour
 
         m_characterController = GetComponent<CharacterController>();
         m_playerInput = GetComponent<PlayerInput>();
+    }
+
+    private void FixedUpdate()
+    {
+        Move();
+
+        m_inputValue.y += Physics.gravity.y * Time.deltaTime;
     }
 
     private void OnEnable()
@@ -63,38 +73,31 @@ public class PlayerController : MonoBehaviour
 
     private void OnShot(InputAction.CallbackContext context)
     {
-        SoundManager.Play2D(m_bulletShot);
-
         //カメラの中央からRayを飛ばす
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out var hit))
         {
-            Debug.Log(hit.transform.gameObject.name.ToString());
+            m_revolver.GetComponent<RevolverController>().Shot();
         }
-    }
-
-    private void FixedUpdate()
-    {
-        Move();
-
-        m_inputValue.y += Physics.gravity.y * Time.deltaTime;
     }
 
     private void Move()
     {
+        //カメラの向きに合わせて移動方向を決定
         Vector3 cameraForward = Vector3.Scale(Camera.main.transform.forward, new Vector3(1, 0, 1)).normalized;
         Vector3 moveVelocity = cameraForward * m_inputValue.z + Camera.main.transform.right * m_inputValue.x;
         moveVelocity = new Vector3(moveVelocity.x * m_moveSpeed, m_inputValue.y, moveVelocity.z * m_moveSpeed);
 
+        //移動
         m_characterController.Move(moveVelocity * Time.deltaTime);
 
-        Vector3 move = new Vector3(m_inputValue.x, 0, m_inputValue.z);
-        if (move != Vector3.zero)
-        {
-            transform.rotation = Quaternion.Slerp(
-                transform.rotation,
-                Quaternion.LookRotation(move.normalized),
-                0.2f
-            );
-        }
+        //カメラの回転量を取得
+        float yaw = m_virtualCamera.GetCinemachineComponent<CinemachinePOV>().m_HorizontalAxis.Value;
+        float pitch = m_virtualCamera.GetCinemachineComponent<CinemachinePOV>().m_VerticalAxis.Value;
+
+        //プレイヤーを左右に回転
+        transform.rotation = Quaternion.Euler(0, yaw, 0);
+
+        //頭を上下に回転
+        m_playerHead.transform.localRotation = Quaternion.Euler(pitch, 0, 0);
     }
 }
