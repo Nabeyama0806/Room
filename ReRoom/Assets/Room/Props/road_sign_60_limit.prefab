@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 199552080636146166}
   - component: {fileID: 9196338552605952960}
   - component: {fileID: 3216551290138343225}
-  - component: {fileID: -1188691382423801083}
+  - component: {fileID: 5132360881518704669}
   m_Layer: 0
   m_Name: road_sign_60_limit
   m_TagString: Untagged
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-1188691382423801083
-MeshCollider:
+--- !u!65 &5132360881518704669
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -102,7 +102,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 7513811348235135058, guid: 01b96bf7e7765b24fb324bc72c7e8afe, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.15336367, y: 0.69541556, z: 0.69160587}
+  m_Center: {x: 0.022337003, y: -0.000000029802322, z: 0.0071305037}

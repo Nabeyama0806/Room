@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1929881126106006797}
   - component: {fileID: 3271736750603012776}
   - component: {fileID: 757586001737055842}
-  - component: {fileID: 2116668129304294746}
+  - component: {fileID: 471143774138955063}
   m_Layer: 0
   m_Name: Kettle_Prefab
   m_TagString: Untagged
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2116668129304294746
-BoxCollider:
+--- !u!136 &471143774138955063
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -102,6 +102,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.14015926, y: 0.18895972, z: 0.1905283}
-  m_Center: {x: 0, y: 0.031676564, z: -0.021361299}
+  serializedVersion: 2
+  m_Radius: 0.09526415
+  m_Height: 0.18895972
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.09459938, z: -0.021361299}

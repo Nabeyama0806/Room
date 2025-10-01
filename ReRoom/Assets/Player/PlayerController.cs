@@ -73,10 +73,16 @@ public class PlayerController : MonoBehaviour
 
     private void OnShot(InputAction.CallbackContext context)
     {
-        //カメラの中央からRayを飛ばす
+        //銃を撃つ
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out var hit))
         {
             m_revolver.GetComponent<RevolverController>().Shot(hit.point);
+
+            //特定のオブジェクトに当たったら非表示
+            if (hit.transform.gameObject.CompareTag("Props"))
+            { 
+                hit.transform.gameObject.SetActive(false);
+            }
         }
     }
 

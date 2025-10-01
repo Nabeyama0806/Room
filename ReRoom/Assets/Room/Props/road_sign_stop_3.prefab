@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3343590576357150762}
   - component: {fileID: 5998187039148976668}
   - component: {fileID: 385096835684069}
-  - component: {fileID: 6075604794524732847}
+  - component: {fileID: 8651066000917479622}
   m_Layer: 0
   m_Name: road_sign_stop_3
   m_TagString: Untagged
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6075604794524732847
-MeshCollider:
+--- !u!65 &8651066000917479622
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -102,7 +102,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8776639030667904361, guid: ac6076b849cab1b46bee82f9995f32fe, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.1513738, y: 0.69541556, z: 0.69160587}
+  m_Center: {x: 0.022337, y: 0, z: 0.0021766126}
