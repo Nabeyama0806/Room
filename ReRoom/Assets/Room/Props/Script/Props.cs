@@ -19,7 +19,7 @@ public class Props : MonoBehaviour
         switch(m_type)
         {
             case ObjectType.Real:
-                SceneController.Transition(SceneType.Game, SceneType.Result);
+               GameSceneManager.Instance.GameOver();
                 break;
 
             case ObjectType.Fake:

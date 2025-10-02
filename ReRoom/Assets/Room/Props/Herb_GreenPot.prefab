@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_type: 0
+  m_hitSound: {fileID: 8300000, guid: 6a8dba0b1b8924b49b93700045f49747, type: 3}
 --- !u!1001 &2517384426162358734
 PrefabInstance:
   m_ObjectHideFlags: 0
