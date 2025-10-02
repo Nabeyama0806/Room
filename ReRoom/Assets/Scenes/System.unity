@@ -203,10 +203,10 @@ MonoBehaviour:
     volume: 0
   - type: 1
     sound: {fileID: 8300000, guid: 524d2ec099789bb489603f3fdba471ee, type: 3}
-    volume: 100
+    volume: 1
   - type: 2
     sound: {fileID: 8300000, guid: 65545223c3d03c449854ed7535bbf041, type: 3}
-    volume: 60
+    volume: 0.6
   - type: 3
     sound: {fileID: 8300000, guid: 524d2ec099789bb489603f3fdba471ee, type: 3}
     volume: 0
