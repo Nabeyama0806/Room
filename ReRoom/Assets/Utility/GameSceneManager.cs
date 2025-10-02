@@ -5,7 +5,6 @@ enum TextType
 { 
     DeleteCount,
     RoomCount,
-    PlayTime,
 
     Length,
 }
@@ -48,15 +47,14 @@ public class GameSceneManager : MonoBehaviour
         SetRoom();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         //プレイ時間を加算
         m_totalPlayTime += Time.deltaTime;
 
         //UIの更新
-        m_texts[(int)TextType.DeleteCount].text = $"Delete: {m_totalDeleteAmount}";
-        m_texts[(int)TextType.RoomCount].text = $"Room: {m_totalRoomNumber}";
-        m_texts[(int)TextType.PlayTime].text = $"Time: {m_totalPlayTime:F1}s";
+        m_texts[(int)TextType.DeleteCount].text = m_totalDeleteAmount.ToString();
+        m_texts[(int)TextType.RoomCount].text = m_totalRoomNumber.ToString();
     }
 
     private void SetRoom()
