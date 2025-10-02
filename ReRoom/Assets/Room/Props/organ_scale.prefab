@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3209531721179206817}
   - component: {fileID: 1737845109546753151}
   - component: {fileID: 8652037576470598495}
+  - component: {fileID: -2036647317516089651}
   m_Layer: 0
   m_Name: organ_scale
   m_TagString: Props
@@ -151,3 +152,16 @@ CapsuleCollider:
   m_Height: 225
   m_Direction: 1
   m_Center: {x: 0, y: 110, z: 0}
+--- !u!114 &-2036647317516089651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6411409020743871581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 0

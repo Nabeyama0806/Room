@@ -76,13 +76,14 @@ public class PlayerController : MonoBehaviour
         //銃を撃つ
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out var hit))
         {
+            //壁や床は無視する
+            if (!hit.transform.gameObject.CompareTag("Props")) return;
+
+            //弾の発射
             m_revolver.GetComponent<RevolverController>().Shot(hit.point);
 
-            //特定のオブジェクトに当たったら非表示
-            if (hit.transform.gameObject.CompareTag("Props"))
-            { 
-                hit.transform.gameObject.SetActive(false);
-            }
+            //当たったオブジェクトの処理
+            hit.transform.gameObject.GetComponent<Props>().Hit();
         }
     }
 

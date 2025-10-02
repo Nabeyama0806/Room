@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 970516347476132707}
   - component: {fileID: 318297666124927957}
   - component: {fileID: 7713196908764132145}
+  - component: {fileID: 5500919265031835760}
   m_Layer: 0
   m_Name: instrument_trolley
   m_TagString: Untagged
@@ -105,3 +106,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 66.36767, y: 97.11079, z: 46.15559}
   m_Center: {x: 0, y: 48.555393, z: 0}
+--- !u!114 &5500919265031835760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7808914231404648688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6852027487990026873}
   - component: {fileID: 6974507539299691236}
   - component: {fileID: 7080082117532320414}
+  - component: {fileID: 5136387159016680829}
   m_Layer: 0
   m_Name: light_switch
   m_TagString: Props
@@ -105,3 +106,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 21.539467, y: 21.500008, z: 1.5872736}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5136387159016680829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7172723414532329383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5998187039148976668}
   - component: {fileID: 385096835684069}
   - component: {fileID: 8651066000917479622}
+  - component: {fileID: 3738223395047152086}
   m_Layer: 0
   m_Name: road_sign_stop_3
   m_TagString: Props
@@ -105,3 +106,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.1513738, y: 0.69541556, z: 0.69160587}
   m_Center: {x: 0.022337, y: 0, z: 0.0021766126}
+--- !u!114 &3738223395047152086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746701982804632121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 0

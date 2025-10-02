@@ -1,24 +1,20 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum SceneType
+{
+    Title,
+    Game,
+    Result,
+    System,
+}
+
 public class SceneController
 {
     static private bool m_isTransition = false;
 
-    public enum Type
-    {
-        Title,
-        Player,
-        Select,
-        Battle,
-        AddCard,
-        Shop,
-        Result,
-        System,
-    }
-
     //シーンを初期状態で読み込む
-    static public void Redo(Type scene)
+    static public void Redo(SceneType scene)
     {
         //既に遷移中なら受け付けない
         if (m_isTransition) return;
@@ -28,7 +24,7 @@ public class SceneController
     }
 
     //シーンの追加
-    static public void Load(Type scene)
+    static public void Load(SceneType scene)
     {
         //既に遷移中なら受け付けない
         if (m_isTransition) return;
@@ -41,7 +37,7 @@ public class SceneController
     }
 
     //シーンの除外
-    static public void UnLoad(Type scene)
+    static public void UnLoad(SceneType scene)
     {
         //既に遷移中なら受け付けない
         if (m_isTransition) return;
@@ -51,7 +47,7 @@ public class SceneController
     }
 
     //シーン遷移
-    static public void Transition(Type prevScene, Type nextScene)
+    static public void Transition(SceneType prevScene, SceneType nextScene)
     {
         //既に遷移中なら受け付けない
         if (m_isTransition) return;
@@ -85,32 +81,20 @@ public class SceneController
         });
     }
 
-    static private string SceneName(Type type)
+    static private string SceneName(SceneType type)
     {
         switch (type)
         { 
-            case Type.Title:
+            case SceneType.Title:
                 return "Title";
 
-            case Type.Player:
-                return "Player";
+            case SceneType.Game:
+                return "Game";
 
-            case Type.Select:
-                return "Select";
-
-            case Type.Battle:
-                return "Battle";
-
-            case Type.AddCard:
-                return "AddCard";
-
-            case Type.Shop:
-                return "Shop";
-
-            case Type.Result:
+            case SceneType.Result:
                 return "Result";
 
-            case Type.System:
+            case SceneType.System:
                 return "System";
 
             default:

@@ -1,5 +1,5 @@
-using Unity.VisualScripting;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class RoomGenerator : MonoBehaviour
 {
@@ -19,17 +19,19 @@ public class RoomGenerator : MonoBehaviour
         //シングルトン
         if (m_instance == null) m_instance = this;
 
-        //初期の部屋を生成
+        //初期化
         m_createIndex = 0;
-        Create();
     }
 
-    public void Create()
+    public void Create(int fakeAmount)
     {
-        //生成
-        GameObject tmp = Instantiate(m_roomPrefab, new Vector3(0, 0, RoomWidth * m_createIndex), Quaternion.Euler(0, 180, 0));
-        tmp.transform.parent = transform;
+        //部屋を生成
+        GameObject room = Instantiate(m_roomPrefab, new Vector3(0, 0, RoomWidth * m_createIndex), Quaternion.Euler(0, 180, 0));
+        room.transform.parent = transform;
         m_createIndex++;
+
+        //偽物を配置
+        room.GetComponent<RoomCreate>().SetFake(fakeAmount);
 
         //古い部屋を削除
         if (m_createIndex > MaxRoomNum)

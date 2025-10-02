@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 4948899196415192}
   - component: {fileID: 54027119570343926}
   - component: {fileID: 65234393738967500}
+  - component: {fileID: 8223305450053910662}
   m_Layer: 0
   m_Name: CRTMonitor
   m_TagString: Props
@@ -250,6 +251,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.35, y: 0.36, z: 0.35}
   m_Center: {x: 0, y: -0.01, z: -0.075}
+--- !u!114 &8223305450053910662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513596015828096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 0
 --- !u!1 &1786365265868900
 GameObject:
   m_ObjectHideFlags: 0

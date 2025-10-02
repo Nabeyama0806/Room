@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9199595671362156636}
   - component: {fileID: 2372074268449656476}
+  - component: {fileID: -7742229864622124551}
   m_Layer: 0
   m_Name: cabinet_open
   m_TagString: Props
@@ -56,6 +57,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.2079338, y: 0.50822544, z: 0.320901}
   m_Center: {x: 0.0018866648, y: 0.24588764, z: 0.0077972407}
+--- !u!114 &-7742229864622124551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4552321938762414339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 0
 --- !u!1 &5211507055840253196
 GameObject:
   m_ObjectHideFlags: 0

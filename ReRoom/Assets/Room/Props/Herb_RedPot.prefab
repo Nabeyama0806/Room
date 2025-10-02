@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8623914398940353792}
   - component: {fileID: -6873487007464930563}
+  - component: {fileID: 3723529427221683738}
   m_Layer: 0
   m_Name: Herb_RedPot
   m_TagString: Props
@@ -56,6 +57,19 @@ CapsuleCollider:
   m_Height: 0.6
   m_Direction: 1
   m_Center: {x: 0, y: 0.28, z: 0}
+--- !u!114 &3723529427221683738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5647145689224005222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 0
 --- !u!1001 &6647816142638182277
 PrefabInstance:
   m_ObjectHideFlags: 0

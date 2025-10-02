@@ -42,6 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9195328832990799863}
   - component: {fileID: 583725120091232755}
+  - component: {fileID: -4288831611995660829}
   m_Layer: 0
   m_Name: Gas_Skin03
   m_TagString: Props
@@ -88,6 +89,19 @@ CapsuleCollider:
   m_Height: 1.7
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-4288831611995660829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9195328832990799857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 0
 --- !u!1 &9195328833426488855
 GameObject:
   m_ObjectHideFlags: 0

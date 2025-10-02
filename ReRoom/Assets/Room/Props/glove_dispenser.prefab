@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 985962879369525914}
   - component: {fileID: 5780032250967205597}
   - component: {fileID: 7253967676860827821}
+  - component: {fileID: -2447829086714073713}
   m_Layer: 0
   m_Name: glove_dispenser
   m_TagString: Props
@@ -105,3 +106,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 44.999992, y: 31.51836, z: 18.183075}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-2447829086714073713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6068588110494873642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 0

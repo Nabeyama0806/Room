@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 23826652011216508}
   - component: {fileID: 95885960485144154}
   - component: {fileID: 3579318151316021569}
+  - component: {fileID: 3365667382482882949}
   m_Layer: 0
   m_Name: Globe
   m_TagString: Props
@@ -129,3 +130,16 @@ CapsuleCollider:
   m_Height: 0.34399647
   m_Direction: 1
   m_Center: {x: -0.00014145672, y: 0.17228663, z: -0.0091017485}
+--- !u!114 &3365667382482882949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002080106766192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 0

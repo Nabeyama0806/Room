@@ -2,11 +2,14 @@ using UnityEngine;
 
 public class SystemSceneManager : MonoBehaviour
 {
-    [SerializeField] SceneController.Type m_firstScene;
+    [SerializeField] SceneType m_firstScene;
 
     void Start()
     {
-        //タイトルシーンの読み込み
+        //BGMを再生
+        BGM.Instance.Play(m_firstScene);
+
+        //最初のシーンを読み込む
         SceneController.Load(m_firstScene);
     }
 }

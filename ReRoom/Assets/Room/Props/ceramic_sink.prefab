@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8963233176550398992}
   - component: {fileID: 3769804792689632135}
   - component: {fileID: 110172743914624470}
+  - component: {fileID: -3288073856696027774}
   m_Layer: 0
   m_Name: ceramic_sink
   m_TagString: Props
@@ -151,3 +152,16 @@ CapsuleCollider:
   m_Height: 110
   m_Direction: 1
   m_Center: {x: 0, y: 55, z: -15}
+--- !u!114 &-3288073856696027774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6106422112304352960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 0

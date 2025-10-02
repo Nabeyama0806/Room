@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3186851490324523958}
   - component: {fileID: 854856831555035004}
   - component: {fileID: 6530011916317057342}
+  - component: {fileID: -2236683843865552234}
   m_Layer: 0
   m_Name: Fuel Tank
   m_TagString: Props
@@ -105,3 +106,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.13016868, y: 0.38, z: 0.2832769}
   m_Center: {x: -0.0126761645, y: 0.19603188, z: 0}
+--- !u!114 &-2236683843865552234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215395421967941289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 0

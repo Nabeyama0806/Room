@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4327995265759436697}
   - component: {fileID: 2027201447818314481}
   - component: {fileID: 7163717797915678123}
+  - component: {fileID: 1170632544341041839}
   m_Layer: 0
   m_Name: steel_worktop
   m_TagString: Untagged
@@ -105,3 +106,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 184.1043, y: 118.60727, z: 100.36604}
   m_Center: {x: -0.0010013579, y: 59.303635, z: -1.1937118e-10}
+--- !u!114 &1170632544341041839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070969417049719714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 0

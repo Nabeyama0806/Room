@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 4000014284732222}
   - component: {fileID: 205000013224376718}
   - component: {fileID: -4626830714231049038}
+  - component: {fileID: 605043248821976287}
   m_Layer: 0
   m_Name: barrel-3
   m_TagString: Props
@@ -245,3 +246,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.75, y: 1.15, z: 0.75}
   m_Center: {x: 0, y: 0.6, z: 0}
+--- !u!114 &605043248821976287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013650915586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 0
