@@ -4196,8 +4196,6 @@ Transform:
   - {fileID: 308262993072712331}
   - {fileID: 1543287282147787926}
   - {fileID: 3373717093205051286}
-  - {fileID: 4680770995140064564}
-  - {fileID: 44561910704380628}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6677829644107898743
@@ -6143,7 +6141,6 @@ Transform:
   - {fileID: 2149684924539055261}
   - {fileID: 2729582684461748060}
   - {fileID: 6924880677973234784}
-  - {fileID: 453770695829477755}
   - {fileID: 5802804710263997609}
   - {fileID: 8382188357983416123}
   - {fileID: 9052692244563582586}
@@ -6193,11 +6190,9 @@ Transform:
   - {fileID: 2842259109375219243}
   - {fileID: 8523736187550251188}
   - {fileID: 2977772834509740177}
-  - {fileID: 2743832534832986609}
   - {fileID: 4995655478657176778}
   - {fileID: 6014843301063362774}
   - {fileID: 794808638018920421}
-  - {fileID: 553406366815906566}
   - {fileID: 947294545609026674}
   - {fileID: 8709135429755649480}
   - {fileID: 5048460489234006685}
@@ -6219,6 +6214,8 @@ Transform:
   - {fileID: 8325179112193754047}
   - {fileID: 8636790177175433779}
   - {fileID: 831090203297294299}
+  - {fileID: 4680770995140064564}
+  - {fileID: 44561910704380628}
   m_Father: {fileID: 7888006371597348620}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6104177148278543124
@@ -9893,6 +9890,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: shelf
       objectReference: {fileID: 0}
+    - target: {fileID: 7124390180019520523, guid: ac4b60ce505ae764984cee6a9a3e7cff,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9976,6 +9978,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: road_sign_60_limit
+      objectReference: {fileID: 0}
+    - target: {fileID: 3791936704308773861, guid: aa9af19bb181d0d4f97c9b229fa06f7c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10074,6 +10081,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barrel-1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012512741780, guid: f5be68f92137da247b5d8228eab16f79, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011537233398, guid: f5be68f92137da247b5d8228eab16f79, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.40000004
@@ -10152,6 +10163,10 @@ PrefabInstance:
     - target: {fileID: 1525489940925694, guid: 468dedf35782c5b419a4dd9a5989f498, type: 3}
       propertyPath: m_Name
       value: cistern
+      objectReference: {fileID: 0}
+    - target: {fileID: 1525489940925694, guid: 468dedf35782c5b419a4dd9a5989f498, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4016899347430916, guid: 468dedf35782c5b419a4dd9a5989f498, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10284,12 +10299,17 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 7888006371597348620}
+    m_TransformParent: {fileID: 4144781393095168008}
     m_Modifications:
     - target: {fileID: 4994063792362835647, guid: 5797d767d86099a4687632787f9be779,
         type: 3}
       propertyPath: m_Name
       value: bucketPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994063792362835647, guid: 5797d767d86099a4687632787f9be779,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5622086779891684357, guid: 5797d767d86099a4687632787f9be779,
         type: 3}
@@ -10309,7 +10329,7 @@ PrefabInstance:
     - target: {fileID: 5622086779891684357, guid: 5797d767d86099a4687632787f9be779,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.67
+      value: 3.587
       objectReference: {fileID: 0}
     - target: {fileID: 5622086779891684357, guid: 5797d767d86099a4687632787f9be779,
         type: 3}
@@ -10319,7 +10339,7 @@ PrefabInstance:
     - target: {fileID: 5622086779891684357, guid: 5797d767d86099a4687632787f9be779,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.73
+      value: -0.821
       objectReference: {fileID: 0}
     - target: {fileID: 5622086779891684357, guid: 5797d767d86099a4687632787f9be779,
         type: 3}
@@ -10453,6 +10473,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PillsTube_Green (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733447016227815370, guid: edd8c8a56bfb7744f92d5e40bd9ba828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4326347401871315580, guid: edd8c8a56bfb7744f92d5e40bd9ba828,
         type: 3}
@@ -10598,6 +10623,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Surveillance Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 4563459568915873646, guid: eed54a613be71b543a99e53a8e2914de,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8051894795600161108, guid: eed54a613be71b543a99e53a8e2914de,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -10718,80 +10748,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1361327737636191435}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1539478172644362731
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 4144781393095168008}
-    m_Modifications:
-    - target: {fileID: 1373964259902001296, guid: 7f0486e5f70576847822519d8df93fdc,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.929
-      objectReference: {fileID: 0}
-    - target: {fileID: 1373964259902001296, guid: 7f0486e5f70576847822519d8df93fdc,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.886
-      objectReference: {fileID: 0}
-    - target: {fileID: 1373964259902001296, guid: 7f0486e5f70576847822519d8df93fdc,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.544
-      objectReference: {fileID: 0}
-    - target: {fileID: 1373964259902001296, guid: 7f0486e5f70576847822519d8df93fdc,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071067
-      objectReference: {fileID: 0}
-    - target: {fileID: 1373964259902001296, guid: 7f0486e5f70576847822519d8df93fdc,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1373964259902001296, guid: 7f0486e5f70576847822519d8df93fdc,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 1373964259902001296, guid: 7f0486e5f70576847822519d8df93fdc,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1373964259902001296, guid: 7f0486e5f70576847822519d8df93fdc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1373964259902001296, guid: 7f0486e5f70576847822519d8df93fdc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1373964259902001296, guid: 7f0486e5f70576847822519d8df93fdc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6068588110494873642, guid: 7f0486e5f70576847822519d8df93fdc,
-        type: 3}
-      propertyPath: m_Name
-      value: glove_dispenser
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7f0486e5f70576847822519d8df93fdc, type: 3}
---- !u!4 &453770695829477755 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1373964259902001296, guid: 7f0486e5f70576847822519d8df93fdc,
-    type: 3}
-  m_PrefabInstance: {fileID: 1539478172644362731}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1651147970860350531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10804,6 +10760,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FirstAid_Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396988188536389404, guid: a878263a8b8f3ef4d9b4989733883f3a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7004791479623421552, guid: a878263a8b8f3ef4d9b4989733883f3a,
         type: 3}
@@ -10872,12 +10833,17 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 7888006371597348620}
+    m_TransformParent: {fileID: 4144781393095168008}
     m_Modifications:
     - target: {fileID: 1215395421967941289, guid: 3028bdafdc13c1c4a911990395bbbce8,
         type: 3}
       propertyPath: m_Name
       value: Fuel Tank
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215395421967941289, guid: 3028bdafdc13c1c4a911990395bbbce8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 1987814901560157203, guid: 3028bdafdc13c1c4a911990395bbbce8,
         type: 3}
@@ -10902,7 +10868,7 @@ PrefabInstance:
     - target: {fileID: 1987814901560157203, guid: 3028bdafdc13c1c4a911990395bbbce8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00000011920929
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1987814901560157203, guid: 3028bdafdc13c1c4a911990395bbbce8,
         type: 3}
@@ -11018,6 +10984,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cabinet
       objectReference: {fileID: 0}
+    - target: {fileID: 8290441752413206194, guid: bb72d628760f38948b12bf1a034e395c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11041,6 +11012,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fuel Tank (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215395421967941289, guid: 3028bdafdc13c1c4a911990395bbbce8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 1987814901560157203, guid: 3028bdafdc13c1c4a911990395bbbce8,
         type: 3}
@@ -11130,6 +11106,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: light_switch
+      objectReference: {fileID: 0}
+    - target: {fileID: 7172723414532329383, guid: 7e6ea9b0528e59b459c9107ba9111a76,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8051708711533528159, guid: 7e6ea9b0528e59b459c9107ba9111a76,
         type: 3}
@@ -11279,6 +11260,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottles
       objectReference: {fileID: 0}
+    - target: {fileID: 699927443975357954, guid: 14122aa85152c3f468ea41585bccd496,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1196086780321355479, guid: 14122aa85152c3f468ea41585bccd496,
         type: 3}
       propertyPath: m_IsActive
@@ -11388,6 +11374,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fuel Tank (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215395421967941289, guid: 3028bdafdc13c1c4a911990395bbbce8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 1987814901560157203, guid: 3028bdafdc13c1c4a911990395bbbce8,
         type: 3}
@@ -11523,6 +11514,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PillsTubeRed (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5559945759241295410, guid: cb8aff9e49677dc4bbe17898109d0fbf,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11597,6 +11593,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: desk_lamp
       objectReference: {fileID: 0}
+    - target: {fileID: 6006474434480965350, guid: dc5372f1ca13fd643b81052cf067bf1c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11620,6 +11621,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: road_sign_bus_stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5826231543695856044, guid: 8e83eb4cffc2f114eb4d648421ac9092,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7386386489136653247, guid: 8e83eb4cffc2f114eb4d648421ac9092,
         type: 3}
@@ -11704,6 +11710,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: road_sign_crosswalk
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390649932541883209, guid: b3ea278cf3d63a446a6ee979eb36fece,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8976859697805164890, guid: b3ea278cf3d63a446a6ee979eb36fece,
         type: 3}
@@ -11845,69 +11856,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2660426245809449864}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &2745817708593779613
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 4144781393095168008}
-    m_Modifications:
-    - target: {fileID: 1462780002140128, guid: c1e3760a8214d6047b2d660cc7aed1f5, type: 3}
-      propertyPath: m_Name
-      value: cistern_yellow_rust
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248029130697324, guid: c1e3760a8214d6047b2d660cc7aed1f5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248029130697324, guid: c1e3760a8214d6047b2d660cc7aed1f5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248029130697324, guid: c1e3760a8214d6047b2d660cc7aed1f5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248029130697324, guid: c1e3760a8214d6047b2d660cc7aed1f5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.70710707
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248029130697324, guid: c1e3760a8214d6047b2d660cc7aed1f5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.00000009974805
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248029130697324, guid: c1e3760a8214d6047b2d660cc7aed1f5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.70710653
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248029130697324, guid: c1e3760a8214d6047b2d660cc7aed1f5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.00000009974797
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248029130697324, guid: c1e3760a8214d6047b2d660cc7aed1f5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248029130697324, guid: c1e3760a8214d6047b2d660cc7aed1f5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4248029130697324, guid: c1e3760a8214d6047b2d660cc7aed1f5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c1e3760a8214d6047b2d660cc7aed1f5, type: 3}
---- !u!4 &2743832534832986609 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4248029130697324, guid: c1e3760a8214d6047b2d660cc7aed1f5,
-    type: 3}
-  m_PrefabInstance: {fileID: 2745817708593779613}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2803091936945588438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11920,6 +11868,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: organ_scale
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411409020743871581, guid: f5b0ce0e29ca44244b710452adad9d67,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7856498294156639982, guid: f5b0ce0e29ca44244b710452adad9d67,
         type: 3}
@@ -11994,6 +11947,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BuildersTorch_PBR_Orange
       objectReference: {fileID: 0}
+    - target: {fileID: 1890123382051756, guid: a0692c8b8bc378d45bd6b81ced8ed51f, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4226883857638280, guid: a0692c8b8bc378d45bd6b81ced8ed51f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.753
@@ -12057,6 +12014,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bucketPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994063792362835647, guid: 5797d767d86099a4687632787f9be779,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5622086779891684357, guid: 5797d767d86099a4687632787f9be779,
         type: 3}
@@ -12146,6 +12108,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cistern_red
       objectReference: {fileID: 0}
+    - target: {fileID: 1754809807670932, guid: e849ce7d0c035254baa54bdcf2520161, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4767416075205460, guid: e849ce7d0c035254baa54bdcf2520161, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.008819938
@@ -12209,6 +12175,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: road_sign_stop_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1746701982804632121, guid: d3813246ce33ea04db585f0d3d6e5567,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3343590576357150762, guid: d3813246ce33ea04db585f0d3d6e5567,
         type: 3}
@@ -12357,6 +12328,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cistern_big_yellow_rust
       objectReference: {fileID: 0}
+    - target: {fileID: 1781409886545028, guid: 310e671645cc97f4282a4fda833c6d57, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4446905220503596, guid: 310e671645cc97f4282a4fda833c6d57, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.429296
@@ -12495,6 +12470,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FirstAid_Red
       objectReference: {fileID: 0}
+    - target: {fileID: 5396988188536389404, guid: a878263a8b8f3ef4d9b4989733883f3a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7004791479623421552, guid: a878263a8b8f3ef4d9b4989733883f3a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12619,6 +12599,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PillsTube_Blue (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9018083828553603102, guid: 0048aa371190684478e421570bc2672b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12642,6 +12627,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Herb_RedPot
+      objectReference: {fileID: 0}
+    - target: {fileID: 5647145689224005222, guid: 7a228cc29ea2fcf4ba4d843d2f2885f4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8623914398940353792, guid: 7a228cc29ea2fcf4ba4d843d2f2885f4,
         type: 3}
@@ -12715,6 +12705,10 @@ PrefabInstance:
     - target: {fileID: 1000013650915586, guid: 182ed389c043f694792b11d198a06985, type: 3}
       propertyPath: m_Name
       value: barrel-3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013650915586, guid: 182ed389c043f694792b11d198a06985, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4000014284732222, guid: 182ed389c043f694792b11d198a06985, type: 3}
       propertyPath: m_LocalScale.x
@@ -12795,6 +12789,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: writing_board
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381499627089418652, guid: 1177b4e44b87da84c932e68b5e42e010,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 9199704930121776330, guid: 1177b4e44b87da84c932e68b5e42e010,
         type: 3}
@@ -13009,6 +13008,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Surveillance Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 4563459568915873646, guid: eed54a613be71b543a99e53a8e2914de,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8051894795600161108, guid: eed54a613be71b543a99e53a8e2914de,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -13067,6 +13071,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PillsTube_Green (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733447016227815370, guid: edd8c8a56bfb7744f92d5e40bd9ba828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4326347401871315580, guid: edd8c8a56bfb7744f92d5e40bd9ba828,
         type: 3}
@@ -13155,6 +13164,10 @@ PrefabInstance:
     - target: {fileID: 1000013650915586, guid: 182ed389c043f694792b11d198a06985, type: 3}
       propertyPath: m_Name
       value: barrel-3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013650915586, guid: 182ed389c043f694792b11d198a06985, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4000014284732222, guid: 182ed389c043f694792b11d198a06985, type: 3}
       propertyPath: m_LocalScale.x
@@ -13286,6 +13299,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: desk_chair
       objectReference: {fileID: 0}
+    - target: {fileID: 7332665129289182244, guid: 93b041ca22d236e4ea1d2e20eec02a12,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13309,6 +13327,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fire Extinguisher
+      objectReference: {fileID: 0}
+    - target: {fileID: 4307560395867504668, guid: bf0ea4a7b2c279047a7d801bff445913,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4345197550711715204, guid: bf0ea4a7b2c279047a7d801bff445913,
         type: 3}
@@ -13433,6 +13456,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Surveillance Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 4563459568915873646, guid: eed54a613be71b543a99e53a8e2914de,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8051894795600161108, guid: eed54a613be71b543a99e53a8e2914de,
         type: 3}
@@ -13562,6 +13590,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fuel Tank (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1215395421967941289, guid: 3028bdafdc13c1c4a911990395bbbce8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1987814901560157203, guid: 3028bdafdc13c1c4a911990395bbbce8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13636,6 +13669,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kettle_Prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 1261993076855398327, guid: 57e3a8d1a8f7945468f6f50ed41c0385,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1929881126106006797, guid: 57e3a8d1a8f7945468f6f50ed41c0385,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13709,6 +13747,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gas_Skin02
+      objectReference: {fileID: 0}
+    - target: {fileID: 3552242436747660548, guid: cac183007e1f0314bb3fa8c729867266,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3552242436747660550, guid: cac183007e1f0314bb3fa8c729867266,
         type: 3}
@@ -13849,6 +13892,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: glove_dispenser
       objectReference: {fileID: 0}
+    - target: {fileID: 6068588110494873642, guid: 7f0486e5f70576847822519d8df93fdc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13872,6 +13920,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PillsTube_Green
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733447016227815370, guid: edd8c8a56bfb7744f92d5e40bd9ba828,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4326347401871315580, guid: edd8c8a56bfb7744f92d5e40bd9ba828,
         type: 3}
@@ -13945,6 +13998,10 @@ PrefabInstance:
     - target: {fileID: 1510774975657396, guid: 399f8c09b895d8c4eac270517e931c13, type: 3}
       propertyPath: m_Name
       value: cistern_green
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510774975657396, guid: 399f8c09b895d8c4eac270517e931c13, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4024475571854818, guid: 399f8c09b895d8c4eac270517e931c13, type: 3}
       propertyPath: m_LocalScale.x
@@ -14157,6 +14214,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FirstAid_Green
       objectReference: {fileID: 0}
+    - target: {fileID: 8430575460017593913, guid: d8b5acaf18cd7254f94b467141cb29ee,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14180,6 +14242,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: cabinet
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552321938762414339, guid: 147373c05fb759048b745b9a0835461c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 9199595671362156636, guid: 147373c05fb759048b745b9a0835461c,
         type: 3}
@@ -14254,6 +14321,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fuel Tank (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215395421967941289, guid: 3028bdafdc13c1c4a911990395bbbce8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 1987814901560157203, guid: 3028bdafdc13c1c4a911990395bbbce8,
         type: 3}
@@ -14453,6 +14525,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PillsTube_Blue
       objectReference: {fileID: 0}
+    - target: {fileID: 9018083828553603102, guid: 0048aa371190684478e421570bc2672b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14475,6 +14552,10 @@ PrefabInstance:
     - target: {fileID: 1781409886545028, guid: 310e671645cc97f4282a4fda833c6d57, type: 3}
       propertyPath: m_Name
       value: cistern_big_yellow_rust
+      objectReference: {fileID: 0}
+    - target: {fileID: 1781409886545028, guid: 310e671645cc97f4282a4fda833c6d57, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4446905220503596, guid: 310e671645cc97f4282a4fda833c6d57, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14599,6 +14680,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: road_sign_60_limit (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3791936704308773861, guid: aa9af19bb181d0d4f97c9b229fa06f7c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14748,6 +14834,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ceramic_sink
       objectReference: {fileID: 0}
+    - target: {fileID: 6106422112304352960, guid: 9978bd4ec43a3ac40b2a6e6893626b5d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14771,6 +14862,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fuel Tank
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215395421967941289, guid: 3028bdafdc13c1c4a911990395bbbce8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 1987814901560157203, guid: 3028bdafdc13c1c4a911990395bbbce8,
         type: 3}
@@ -14845,6 +14941,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BuildersTorch_PBR_Yellow
       objectReference: {fileID: 0}
+    - target: {fileID: 1450602116203488, guid: 40b7e4c60e2fd894c8e2ce3afdeb1759, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4714962066093090, guid: 40b7e4c60e2fd894c8e2ce3afdeb1759, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.1000001
@@ -14916,6 +15016,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Herb_BluePot
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108576205462564222, guid: a193e276985b8b24bb483fc29443b490,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7708596336299151576, guid: a193e276985b8b24bb483fc29443b490,
         type: 3}
@@ -15065,6 +15170,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: road_sign_bus_stop
       objectReference: {fileID: 0}
+    - target: {fileID: 5826231543695856044, guid: 8e83eb4cffc2f114eb4d648421ac9092,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7386386489136653247, guid: 8e83eb4cffc2f114eb4d648421ac9092,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15137,6 +15247,10 @@ PrefabInstance:
     - target: {fileID: 1000012512741780, guid: f5be68f92137da247b5d8228eab16f79, type: 3}
       propertyPath: m_Name
       value: barrel-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012512741780, guid: f5be68f92137da247b5d8228eab16f79, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4000011537233398, guid: f5be68f92137da247b5d8228eab16f79, type: 3}
       propertyPath: m_LocalScale.x
@@ -15268,6 +15382,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: road_sign_stop_1
       objectReference: {fileID: 0}
+    - target: {fileID: 2333979031032067178, guid: e2fd7bbe97a92824b9b34e3991334847,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15291,6 +15410,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: writing_board
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381499627089418652, guid: 1177b4e44b87da84c932e68b5e42e010,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 9199704930121776330, guid: 1177b4e44b87da84c932e68b5e42e010,
         type: 3}
@@ -15446,6 +15570,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: road_sign_stop_2
       objectReference: {fileID: 0}
+    - target: {fileID: 4485034288721324332, guid: 0eac98481178120488bb1f58b4b66a7b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15519,6 +15648,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Surveillance Camera (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4563459568915873646, guid: eed54a613be71b543a99e53a8e2914de,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8051894795600161108, guid: eed54a613be71b543a99e53a8e2914de,
         type: 3}
@@ -15647,6 +15781,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: trash_can
+      objectReference: {fileID: 0}
+    - target: {fileID: 4158654751188686787, guid: 093c307491c5fbb428e1e82a0fb794ba,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5959822854505628253, guid: 093c307491c5fbb428e1e82a0fb794ba,
         type: 3}
@@ -15782,6 +15921,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: shelf
       objectReference: {fileID: 0}
+    - target: {fileID: 7124390180019520523, guid: ac4b60ce505ae764984cee6a9a3e7cff,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15792,105 +15936,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1052373645278599492, guid: ac4b60ce505ae764984cee6a9a3e7cff,
     type: 3}
   m_PrefabInstance: {fileID: 8047239388806909126}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &8070543289661996550
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 4144781393095168008}
-    m_Modifications:
-    - target: {fileID: 5647145689224005222, guid: 7a228cc29ea2fcf4ba4d843d2f2885f4,
-        type: 3}
-      propertyPath: m_Name
-      value: Herb_RedPot
-      objectReference: {fileID: 0}
-    - target: {fileID: 6614504662889597038, guid: 7a228cc29ea2fcf4ba4d843d2f2885f4,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 6614504662889597038, guid: 7a228cc29ea2fcf4ba4d843d2f2885f4,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.026
-      objectReference: {fileID: 0}
-    - target: {fileID: 8623914398940353792, guid: 7a228cc29ea2fcf4ba4d843d2f2885f4,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8623914398940353792, guid: 7a228cc29ea2fcf4ba4d843d2f2885f4,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8623914398940353792, guid: 7a228cc29ea2fcf4ba4d843d2f2885f4,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8623914398940353792, guid: 7a228cc29ea2fcf4ba4d843d2f2885f4,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.1499777
-      objectReference: {fileID: 0}
-    - target: {fileID: 8623914398940353792, guid: 7a228cc29ea2fcf4ba4d843d2f2885f4,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.2263155
-      objectReference: {fileID: 0}
-    - target: {fileID: 8623914398940353792, guid: 7a228cc29ea2fcf4ba4d843d2f2885f4,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.335
-      objectReference: {fileID: 0}
-    - target: {fileID: 8623914398940353792, guid: 7a228cc29ea2fcf4ba4d843d2f2885f4,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8623914398940353792, guid: 7a228cc29ea2fcf4ba4d843d2f2885f4,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8623914398940353792, guid: 7a228cc29ea2fcf4ba4d843d2f2885f4,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8623914398940353792, guid: 7a228cc29ea2fcf4ba4d843d2f2885f4,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8623914398940353792, guid: 7a228cc29ea2fcf4ba4d843d2f2885f4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8623914398940353792, guid: 7a228cc29ea2fcf4ba4d843d2f2885f4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8623914398940353792, guid: 7a228cc29ea2fcf4ba4d843d2f2885f4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7a228cc29ea2fcf4ba4d843d2f2885f4, type: 3}
---- !u!4 &553406366815906566 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8623914398940353792, guid: 7a228cc29ea2fcf4ba4d843d2f2885f4,
-    type: 3}
-  m_PrefabInstance: {fileID: 8070543289661996550}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8119169428051696553
 PrefabInstance:
@@ -15903,6 +15948,10 @@ PrefabInstance:
     - target: {fileID: 1513596015828096, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
       propertyPath: m_Name
       value: CRTMonitor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1513596015828096, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4948899196415192, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
       propertyPath: m_LocalScale.x
@@ -15975,6 +16024,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: road_sign_child_stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 4716262070852592493, guid: bc26d215290e24b4e8f9ba642515fc3c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8586357354395062654, guid: bc26d215290e24b4e8f9ba642515fc3c,
         type: 3}
@@ -16100,6 +16154,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: glove_dispenser (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6068588110494873642, guid: 7f0486e5f70576847822519d8df93fdc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16174,6 +16233,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PillsTubeRed
       objectReference: {fileID: 0}
+    - target: {fileID: 5559945759241295410, guid: cb8aff9e49677dc4bbe17898109d0fbf,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16197,6 +16261,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: road sign_left
+      objectReference: {fileID: 0}
+    - target: {fileID: 916348986562589161, guid: 7051f5708d2baff4c985b8b2612fe980,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4246014103623877626, guid: 7051f5708d2baff4c985b8b2612fe980,
         type: 3}
@@ -16282,6 +16351,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Herb_GreenPot
       objectReference: {fileID: 0}
+    - target: {fileID: 3920816298278675485, guid: a961449e439dd954a8e31e4e32ab968d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8228655922814908579, guid: a961449e439dd954a8e31e4e32ab968d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16356,6 +16430,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: road_sign_stop_3
       objectReference: {fileID: 0}
+    - target: {fileID: 1746701982804632121, guid: d3813246ce33ea04db585f0d3d6e5567,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 3343590576357150762, guid: d3813246ce33ea04db585f0d3d6e5567,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16429,6 +16508,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BuildersTorch_PBR_Orange (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1890123382051756, guid: a0692c8b8bc378d45bd6b81ced8ed51f, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4226883857638280, guid: a0692c8b8bc378d45bd6b81ced8ed51f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.1637348
@@ -16492,6 +16575,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fuel Tank
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215395421967941289, guid: 3028bdafdc13c1c4a911990395bbbce8,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 1987814901560157203, guid: 3028bdafdc13c1c4a911990395bbbce8,
         type: 3}
@@ -16565,6 +16653,10 @@ PrefabInstance:
     - target: {fileID: 1525489940925694, guid: 468dedf35782c5b419a4dd9a5989f498, type: 3}
       propertyPath: m_Name
       value: cistern (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1525489940925694, guid: 468dedf35782c5b419a4dd9a5989f498, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4016899347430916, guid: 468dedf35782c5b419a4dd9a5989f498, type: 3}
       propertyPath: m_LocalPosition.x
