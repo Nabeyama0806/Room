@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.GameCenter;
 
 public class RoomCreate : MonoBehaviour
 {
@@ -20,9 +18,12 @@ public class RoomCreate : MonoBehaviour
         List<GameObject> list = new List<GameObject>(m_fakeObjectList);
         for (int i = 0; i < fakeAmount; i++)
         {
-            //同じものが選ばれないようにリストから削除しながら選択
+            //ランダムに選ばれたオブジェクトを表示
             int index = Random.Range(0, list.Count);
             list[index].SetActive(true);
+            list[index].GetComponent<FakeProps>().SetFakeProps();
+
+            //同じものが選ばれないようにリストから削除しながら選択
             list.RemoveAt(index);
         }
 
