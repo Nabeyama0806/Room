@@ -19,7 +19,7 @@ public class GameSceneManager : MonoBehaviour
     private const int MaxFakeAmount = 6;  //¶¬‚·‚é‹U•¨‚ÌÅ‘å”
 
     private int m_fakeAmount;       //¶¬‚·‚é‹U•¨‚Ì”
-    private int m_deleteAmount;     //íœ‚µ‚½‹U•¨‚Ì”
+    private int m_deleteAmount;     //íœ‚·‚é‹U•¨‚Ì”
 
     private int m_totalDeleteAmount;      //íœ‚µ‚½‹U•¨‚Ì‘”
     private int m_totalRoomNumber;        //i‚ñ‚¾•”‰®‚Ì‘”
@@ -37,7 +37,7 @@ public class GameSceneManager : MonoBehaviour
         m_deleteAmount = 0;
 
         m_totalDeleteAmount = 0;
-        m_totalRoomNumber = 0;
+        m_totalRoomNumber = 1;
         m_totalPlayTime = 0.0f;
     }
 
@@ -53,7 +53,7 @@ public class GameSceneManager : MonoBehaviour
         m_totalPlayTime += Time.deltaTime;
 
         //UI‚ÌXV
-        m_texts[(int)TextType.DeleteCount].text = m_totalDeleteAmount.ToString();
+        m_texts[(int)TextType.DeleteCount].text = m_deleteAmount.ToString();
         m_texts[(int)TextType.RoomCount].text = m_totalRoomNumber.ToString();
     }
 
