@@ -7,7 +7,7 @@ public class RoomGenerator : MonoBehaviour
 
     [SerializeField] GameObject m_roomPrefab;
 
-    private const int RoomWidth = 16;
+    private const int RoomWidth = 32;
     private const int MaxRoomNum = 3;
 
     private int m_createIndex;

@@ -1,18 +1,21 @@
 using Cinemachine;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    private const float RayLength = 2.5f;
+
     [SerializeField] float m_moveSpeed;         //移動速度
     [SerializeField] float m_jumpPower;         //ジャンプ力
-    [SerializeField] GameObject m_revolver;     //銃のモデル
     [SerializeField] CinemachineVirtualCamera m_virtualCamera; //カメラ
+    [SerializeField] GameObject m_revolver;     //銃のモデル
+    [SerializeField] GameObject m_canOpenUI;
 
     private CharacterController m_characterController;
     private PlayerInput m_playerInput;
-    private Vector3 m_inputValue;   
+    private Vector3 m_inputValue;
+    private bool m_canOpen;
 
     void Awake()
     {
@@ -32,6 +35,34 @@ public class PlayerController : MonoBehaviour
 
         //重力
         m_inputValue.y += Physics.gravity.y * Time.deltaTime;
+    }
+
+    private void Update()
+    {
+        //手の届く範囲にドアがあるか判定
+        DoorController door = null;
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out var hit, RayLength))
+        {
+            //ドアがあったら開閉可能にする
+            if (hit.transform.gameObject.CompareTag("Door"))
+            {
+                m_canOpenUI.SetActive(true);
+                door = hit.transform.gameObject.GetComponent<DoorController>();
+                door.CanOpen = true;
+            }
+        }
+        else
+        {
+            //手が届かない範囲にある場合はUIを非表示にする
+            m_canOpenUI.SetActive(false);
+
+            //前に触れていたドアの開閉を不可にする
+            if (door != null)
+            {
+                door.CanOpen = false;
+                door = null;
+            }
+        }
     }
 
     private void OnEnable()

@@ -8,11 +8,11 @@ public class CameraController : MonoBehaviour
     [SerializeField] InputActionProperty m_lookAction;
     [SerializeField] float m_sensitivity = 200f;
 
-    private CinemachinePOV pov;
+    private CinemachinePOV m_pov;
 
     private void Awake()
     {
-        pov = m_virtualCamera.GetCinemachineComponent<CinemachinePOV>();
+        m_pov = m_virtualCamera.GetCinemachineComponent<CinemachinePOV>();
     }
 
     private void OnEnable()
@@ -31,7 +31,7 @@ public class CameraController : MonoBehaviour
 
         //“ü—Í‚ðPOV‚É“n‚·
         if (lookInput.sqrMagnitude < 0.001f) return;
-        pov.m_HorizontalAxis.Value += lookInput.x * m_sensitivity * Time.deltaTime;
-        pov.m_VerticalAxis.Value -= lookInput.y * m_sensitivity * Time.deltaTime; 
+        m_pov.m_HorizontalAxis.Value += lookInput.x * m_sensitivity * Time.deltaTime;
+        m_pov.m_VerticalAxis.Value -= lookInput.y * m_sensitivity * Time.deltaTime; 
     }
 }

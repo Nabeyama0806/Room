@@ -216,8 +216,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.40584895, z: 0, w: 0.91394025}
   m_LocalPosition: {x: -2.695, y: 1.044, z: -3.415}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1104846347409028833}
   - {fileID: 2050269571434416445}
@@ -262,7 +262,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_type: 0
-  m_hitSound: {fileID: 8300000, guid: 6a8dba0b1b8924b49b93700045f49747, type: 3}
 --- !u!1 &6727585622507551880
 GameObject:
   m_ObjectHideFlags: 0
