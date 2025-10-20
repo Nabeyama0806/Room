@@ -16,7 +16,7 @@ public class GameSceneManager : MonoBehaviour
     [SerializeField] PlayData m_playData;
     [SerializeField] TextMeshProUGUI[] m_texts = new TextMeshProUGUI[(int)TextType.Length];
 
-    private const int MaxFakeAmount = 6;  //¶¬‚·‚é‹U•¨‚ÌÅ‘å”
+    private const int MaxFakeAmount = 4;  //¶¬‚·‚é‹U•¨‚ÌÅ‘å”
 
     private int m_fakeAmount;       //¶¬‚·‚é‹U•¨‚Ì”
     private int m_deleteAmount;     //íœ‚·‚é‹U•¨‚Ì”
@@ -44,7 +44,7 @@ public class GameSceneManager : MonoBehaviour
     private void Start()
     {
         //Å‰‚Ì•”‰®‚ğ¶¬
-        SetRoom();
+        SetRoom(true);
     }
 
     private void FixedUpdate()
@@ -57,13 +57,13 @@ public class GameSceneManager : MonoBehaviour
         m_texts[(int)TextType.RoomCount].text = m_totalRoomNumber.ToString();
     }
 
-    private void SetRoom()
+    private void SetRoom(bool isFirst = false)
     {
         //‹U•¨‚Ì”‚ğƒ‰ƒ“ƒ_ƒ€‚ÉŒˆ’è
         m_fakeAmount = Random.Range(1, MaxFakeAmount + 1);
 
         //•”‰®‚ğ¶¬
-        RoomGenerator.Instance.Create(m_fakeAmount);
+        RoomGenerator.Instance.Create(m_fakeAmount, isFirst);
     }
 
     public void DeleteFake()

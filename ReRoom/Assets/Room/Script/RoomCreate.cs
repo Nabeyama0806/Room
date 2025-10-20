@@ -23,7 +23,7 @@ public class RoomCreate : MonoBehaviour
             list[index].SetActive(true);
             list[index].GetComponent<FakeProps>().SetFakeProps();
 
-            //同じものが選ばれないようにリストから削除しながら選択
+            //同じものが選ばれないようにリストから削除
             list.RemoveAt(index);
         }
 

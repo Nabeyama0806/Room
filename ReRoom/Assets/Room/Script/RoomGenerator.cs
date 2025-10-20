@@ -1,14 +1,16 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class RoomGenerator : MonoBehaviour
 {
     static RoomGenerator m_instance;
 
+    [SerializeField] GameObject m_firstRoom;
     [SerializeField] GameObject m_roomPrefab;
 
     private const int RoomWidth = 32;
-    private const int MaxRoomNum = 3;
+    private const int MaxRoomNum = 2;
 
     private int m_createIndex;
 
@@ -23,10 +25,11 @@ public class RoomGenerator : MonoBehaviour
         m_createIndex = 0;
     }
 
-    public void Create(int fakeAmount)
+    public void Create(int fakeAmount, bool isFirst = false)
     {
         //ïîâÆÇê∂ê¨
-        GameObject room = Instantiate(m_roomPrefab, new Vector3(0, 0, RoomWidth * m_createIndex), Quaternion.Euler(0, 180, 0));
+        GameObject roomPrefab = isFirst ? m_firstRoom : m_roomPrefab;
+        GameObject room = Instantiate(roomPrefab, new Vector3(0, 0, RoomWidth * m_createIndex), Quaternion.Euler(0, 180, 0));
         room.transform.parent = transform;
         m_createIndex++;
 
