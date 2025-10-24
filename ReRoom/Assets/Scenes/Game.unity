@@ -2064,7 +2064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_firstRoom: {fileID: 3989604936693027631, guid: 1ccf4409b3db9084dbe21f01f05460ff,
     type: 3}
-  m_roomPrefab: {fileID: 7427932607649628523, guid: d04c4d8fd494b8d449441f60aea31b14,
+  m_roomPrefab: {fileID: 145889546899198578, guid: 0f0ce205f1a0b53429bedc3f10b7ea2c,
     type: 3}
 --- !u!1 &2122995110
 GameObject:

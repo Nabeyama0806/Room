@@ -5,6 +5,7 @@ public class RoomCreate : MonoBehaviour
 {
     [SerializeField] List<GameObject> m_fakeObjectList;
     [SerializeField] GameObject m_bottleParent;
+    [SerializeField] GameObject m_doorParent;
 
     public void SetFake(int fakeAmount)
     {
@@ -29,5 +30,10 @@ public class RoomCreate : MonoBehaviour
 
         //ボトルを配置
         m_bottleParent.GetComponent<BottleController>().SetBottle(fakeAmount);
+    }
+
+    public void SetDoorOpen()
+    {
+        m_doorParent.GetComponent<DoorParent>().OpenDoor();
     }
 }

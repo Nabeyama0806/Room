@@ -27,6 +27,12 @@ public class RoomGenerator : MonoBehaviour
 
     public void Create(int fakeAmount, bool isFirst = false)
     {
+        //Œ»İ‚Ì•”‰®‚ÌƒhƒA‚ğŠJ‚¯‚é
+        if (m_createIndex > 0)
+        {
+            transform.GetChild(m_createIndex - 1).GetComponent<RoomCreate>().SetDoorOpen();
+        }
+
         //•”‰®‚ğ¶¬
         GameObject roomPrefab = isFirst ? m_firstRoom : m_roomPrefab;
         GameObject room = Instantiate(roomPrefab, new Vector3(0, 0, RoomWidth * m_createIndex), Quaternion.Euler(0, 180, 0));
