@@ -30,7 +30,7 @@ public class RoomGenerator : MonoBehaviour
         //Œ»İ‚Ì•”‰®‚ÌƒhƒA‚ğŠJ‚¯‚é
         if (m_createIndex > 0)
         {
-            transform.GetChild(m_createIndex - 1).GetComponent<RoomCreate>().SetDoorOpen();
+            transform.GetChild(m_createIndex == 1 ? 0 : 1).GetComponent<RoomCreate>().SetDoorOpen();
         }
 
         //•”‰®‚ğ¶¬
