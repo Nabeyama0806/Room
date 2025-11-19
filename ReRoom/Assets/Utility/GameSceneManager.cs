@@ -72,6 +72,7 @@ public class GameSceneManager : MonoBehaviour
         if (m_createRoomIndex > MaxRoomAmount)
         {
             Completion();
+            return;
         }
 
         //¸”s‚µ‚Ä‚¢‚ê‚Î‰‚ß‚©‚ç
