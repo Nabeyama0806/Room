@@ -16,6 +16,8 @@ public class RoomGenerator : MonoBehaviour
 
     static public RoomGenerator Instance　=> m_instance;
 
+    public int CreateRoomIndex => m_createIndex;
+
     private void Awake()
     {
         //シングルトン
@@ -27,10 +29,12 @@ public class RoomGenerator : MonoBehaviour
 
     public void Create(int fakeAmount, bool isFirst = false)
     {
+        Debug.Log("偽物を [" + fakeAmount + "] 個生成");
+
         //現在の部屋のドアを開ける
         if (m_createIndex > 0)
         {
-            transform.GetChild(m_createIndex == 1 ? 0 : 1).GetComponent<RoomCreate>().SetDoorOpen();
+            transform.GetChild(m_createIndex == 1 ? 0 : transform.childCount - 1).GetComponent<RoomCreate>().SetDoorOpen();
         }
 
         //部屋を生成
@@ -45,7 +49,7 @@ public class RoomGenerator : MonoBehaviour
         //古い部屋を削除
         if (m_createIndex > MaxRoomNum)
         {
-            Destroy(transform.GetChild(0).gameObject);
+           Destroy(transform.GetChild(0).gameObject);
         }
     }
 }

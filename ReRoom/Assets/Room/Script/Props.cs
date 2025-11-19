@@ -15,17 +15,9 @@ public class Props : MonoBehaviour
     public ObjectType Type => m_type;
 
     public void Hit()
-    { 
-        switch(m_type)
-        {
-            case ObjectType.Real:
-               GameSceneManager.Instance.GameOver();
-                break;
-
-            case ObjectType.Fake:
-                GameSceneManager.Instance.DeleteFake();
-                break;
-        }
+    {
+        //自身が削除されることを通知
+        GameSceneManager.Instance.DeleteObject(m_type);
 
         //オブジェクトを非表示にする
         gameObject.SetActive(false);

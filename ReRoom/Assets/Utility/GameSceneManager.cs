@@ -16,14 +16,17 @@ public class GameSceneManager : MonoBehaviour
     [SerializeField] PlayData m_playData;
     [SerializeField] TextMeshProUGUI[] m_texts = new TextMeshProUGUI[(int)TextType.Length];
 
-    private const int MaxFakeAmount = 4;  //生成する偽物の最大数
+    private const int MaxRoomAmount = 6;  //生成する偽物の最小数
 
-    private int m_fakeAmount;       //生成する偽物の数
-    private int m_deleteAmount;     //削除する偽物の数
+    private int m_createRoomIndex;      //生成した部屋のインデックス
+    private int m_fakeAmount;           //生成する偽物の数
+    private int m_deleteAmount;         //削除する偽物の数
 
-    private int m_totalDeleteAmount;      //削除した偽物の総数
-    private int m_totalRoomNumber;        //進んだ部屋の総数
-    private float m_totalPlayTime;        //プレイ時間
+    private int m_totalDeleteAmount;    //削除した偽物の総数
+    private int m_totalRoomNumber;      //進んだ部屋の総数
+    private float m_totalPlayTime;      //プレイ時間
+
+    private bool m_isMistake;          //失敗判定
 
     static public GameSceneManager Instance => m_instance;
 
@@ -33,12 +36,15 @@ public class GameSceneManager : MonoBehaviour
         if (m_instance == null) m_instance = this;
 
         //初期化
+        m_createRoomIndex = 0;
         m_fakeAmount = 0;
         m_deleteAmount = 0;
 
         m_totalDeleteAmount = 0;
         m_totalRoomNumber = 1;
         m_totalPlayTime = 0.0f;
+
+        m_isMistake = false;
     }
 
     private void Start()
@@ -59,21 +65,40 @@ public class GameSceneManager : MonoBehaviour
 
     private void SetRoom(bool isFirst = false)
     {
-        //偽物の数をランダムに決定
-        m_fakeAmount = Random.Range(1, MaxFakeAmount + 1);
+        //生成した部屋数の更新
+        m_createRoomIndex++;
 
-        //部屋を生成
-        RoomGenerator.Instance.Create(m_fakeAmount, isFirst);
+        //クリア判定
+        if (m_createRoomIndex > MaxRoomAmount)
+        {
+            Completion();
+        }
+
+        //失敗していれば初めから
+        if (m_isMistake)
+        {
+            m_createRoomIndex = 1;
+            m_isMistake = false;
+        }
+
+        //部屋の生成
+        RoomGenerator.Instance.Create(m_createRoomIndex, isFirst);
     }
 
-    public void DeleteFake()
+    public void DeleteObject(ObjectType type)
     {
-        //削除した偽物の数を加算
+        //本物を削除した場合は失敗判定を立てる
+        if(type == ObjectType.Real) 
+        {
+            m_isMistake = true;
+        }
+
+        //削除したオブジェクトの数を加算
         m_deleteAmount++;
         m_totalDeleteAmount++;
 
-        //全ての偽物を削除したら扉を開けて次の部屋へ
-        if (m_deleteAmount >= m_fakeAmount)
+        //指定の数だけオブジェクトを削除したら扉を開けて次の部屋へ
+        if (m_deleteAmount >= m_createRoomIndex)
         {
             m_deleteAmount = 0;
             m_totalRoomNumber++;
@@ -83,7 +108,7 @@ public class GameSceneManager : MonoBehaviour
         }
     }
 
-    public void GameOver()
+    private void Completion()
     {
         //リザルトの上書き
         m_playData.deleteFakeCount = m_totalDeleteAmount;
