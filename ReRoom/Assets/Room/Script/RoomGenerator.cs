@@ -1,6 +1,4 @@
 using UnityEngine;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 
 public class RoomGenerator : MonoBehaviour
 {
@@ -8,15 +6,14 @@ public class RoomGenerator : MonoBehaviour
 
     [SerializeField] GameObject m_firstRoom;
     [SerializeField] GameObject m_roomPrefab;
+    [SerializeField] GameObject m_innermostRoom;
 
     private const int RoomWidth = 32;
     private const int MaxRoomNum = 2;
 
-    private int m_createIndex;
+    private int m_createCount;
 
     static public RoomGenerator Instance　=> m_instance;
-
-    public int CreateRoomIndex => m_createIndex;
 
     private void Awake()
     {
@@ -24,32 +21,57 @@ public class RoomGenerator : MonoBehaviour
         if (m_instance == null) m_instance = this;
 
         //初期化
-        m_createIndex = 0;
+        m_createCount = 0;
     }
 
-    public void Create(int fakeAmount, bool isFirst = false)
+    public void Initialize()
     {
-        Debug.Log("偽物を [" + fakeAmount + "] 個生成");
-
-        //現在の部屋のドアを開ける
-        if (m_createIndex > 0)
-        {
-            transform.GetChild(m_createIndex == 1 ? 0 : transform.childCount - 1).GetComponent<RoomCreate>().SetDoorOpen();
-        }
-
-        //部屋を生成
-        GameObject roomPrefab = isFirst ? m_firstRoom : m_roomPrefab;
-        GameObject room = Instantiate(roomPrefab, new Vector3(0, 0, RoomWidth * m_createIndex), Quaternion.Euler(0, 180, 0));
+        //最初の部屋を生成
+        GameObject room = Instantiate(m_firstRoom, new Vector3(0, 0, RoomWidth * m_createCount), Quaternion.Euler(0, 180, 0));
         room.transform.parent = transform;
-        m_createIndex++;
+        m_createCount++;
 
         //偽物を配置
-        room.GetComponent<RoomCreate>().SetFake(fakeAmount);
+        room.GetComponent<RoomCreate>().SetFake();
+    }
+
+    public void Create()
+    {
+        //現在の部屋を取得
+        GameObject room = transform.GetChild(m_createCount == 1 ? 0 : 1).gameObject;
+
+        //レイヤーの変更
+        room.GetComponent<RoomCreate>().ChangeTags(room.transform);
+
+        //現在の部屋のドアを開ける
+        room.GetComponent<RoomCreate>().SetDoorOpen();
+
+        //新たに部屋を生成
+        room = Instantiate(m_roomPrefab, new Vector3(0, 0, RoomWidth * m_createCount), Quaternion.Euler(0, 180, 0));
+        room.transform.parent = transform;
+        m_createCount++;
+
+        //偽物を配置
+        room.GetComponent<RoomCreate>().SetFake();
 
         //古い部屋を削除
-        if (m_createIndex > MaxRoomNum)
+        if (transform.childCount > MaxRoomNum)
         {
            Destroy(transform.GetChild(0).gameObject);
         }
+    }
+
+    public void Innermost()
+    {
+        //現在の部屋のドアを開ける
+        if (m_createCount > 0)
+        {
+            transform.GetChild(m_createCount == 1 ? 0 : 1).GetComponent<RoomCreate>().SetDoorOpen();
+        }
+
+        //新たに部屋を生成
+        GameObject room = Instantiate(m_innermostRoom, new Vector3(0, 0, RoomWidth * m_createCount), Quaternion.Euler(0, 180, 0));
+        room.transform.parent = transform;
+        m_createCount++;
     }
 }

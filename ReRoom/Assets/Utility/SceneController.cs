@@ -99,7 +99,7 @@ public class SceneController
 
             default:
                 Debug.Log("ƒV[ƒ“‚ª‘¶İ‚µ‚Ü‚¹‚ñB");
-                return "Unknown";
+                return "None";
         }
     }
 }

@@ -1,13 +1,12 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RoomCreate : MonoBehaviour
 {
-    [SerializeField] List<GameObject> m_fakeObjectList;
+    [SerializeField] GameObject[] m_fakeObjectList;
     [SerializeField] GameObject m_bottleParent;
     [SerializeField] GameObject m_doorParent;
 
-    public void SetFake(int fakeAmount)
+    public void SetFake()
     {
         //全て非表示
         foreach (var fake in m_fakeObjectList)
@@ -16,24 +15,28 @@ public class RoomCreate : MonoBehaviour
         }
 
         //偽物をランダムに配置
-        List<GameObject> list = new List<GameObject>(m_fakeObjectList);
-        for (int i = 0; i < fakeAmount; i++)
-        {
-            //ランダムに選ばれたオブジェクトを表示
-            int index = Random.Range(0, list.Count);
-            list[index].SetActive(true);
-            list[index].GetComponent<FakeProps>().SetFakeProps();
-
-            //同じものが選ばれないようにリストから削除
-            list.RemoveAt(index);
-        }
+        int index = Random.Range(0, m_fakeObjectList.Length);
+        m_fakeObjectList[index].SetActive(true);
+        m_fakeObjectList[index].GetComponent<FakeProps>().SetFakeProps();
 
         //ボトルを配置
-        m_bottleParent.GetComponent<BottleController>().SetBottle(fakeAmount);
+        m_bottleParent.GetComponent<BottleController>().SetBottle();
     }
 
     public void SetDoorOpen()
     {
         m_doorParent.GetComponent<DoorParent>().OpenDoor();
+    }
+
+    public void ChangeTags(Transform parent)
+    {
+        foreach (Transform child in parent)
+        {
+            //子オブジェクトのタグを変更
+            child.tag = gameObject.tag;
+
+            //さらにその子オブジェクトもタグを変更    
+            ChangeTags(child);
+        }
     }
 }

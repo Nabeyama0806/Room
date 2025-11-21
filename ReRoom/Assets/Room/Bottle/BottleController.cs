@@ -4,7 +4,7 @@ public class BottleController : MonoBehaviour
 {
     [SerializeField] GameObject[] m_bottles;
 
-    public void SetBottle(int amount)
+    public void SetBottle()
     {
         //全て非表示
         foreach (var bottle in m_bottles)
@@ -13,9 +13,6 @@ public class BottleController : MonoBehaviour
         }
 
         //ランダムな数だけ表示
-        for (int i = 0; i < amount; ++i)
-        {
-            m_bottles[i].SetActive(true);
-        }
+        m_bottles[0].SetActive(true);
     }
 }

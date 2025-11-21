@@ -12,7 +12,6 @@ public class ResultSceneManager : MonoBehaviour
     private void Start()
     {
         //Œ‹‰Ê•\Ž¦
-        m_testList[0].text = m_playData.deleteFakeCount.ToString();
         m_testList[1].text = m_playData.roomNumber.ToString();
         m_testList[2].text = m_playData.playTime.ToString("F1");
 

@@ -1,18 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class DoorController : MonoBehaviour
 {
+    [SerializeField] bool m_canOpen;
+
     private const float RayLength = 3.5f;
     private readonly Vector3 RayOffset = new Vector3(0, 1, 0);
 
     private Animator m_animator;
     private bool m_isOpen;
-    private bool m_canOpen;
 
     public bool CanOpen 
     { 
@@ -22,7 +18,6 @@ public class DoorController : MonoBehaviour
     private void Start()
     {
         m_animator = GetComponent<Animator>();
-        m_canOpen = false;  
         m_isOpen = false;
     }
 
