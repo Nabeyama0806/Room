@@ -3,10 +3,10 @@ using UnityEngine;
 public class RoomCreate : MonoBehaviour
 {
     [SerializeField] GameObject[] m_fakeObjectList;
-    [SerializeField] GameObject m_bottleParent;
+    [SerializeField] GameObject[] m_bottleParent;
     [SerializeField] GameObject m_doorParent;
 
-    public void SetFake()
+    public void SetFake(int bottleAmount)
     {
         //全て非表示
         foreach (var fake in m_fakeObjectList)
@@ -20,7 +20,10 @@ public class RoomCreate : MonoBehaviour
         m_fakeObjectList[index].GetComponent<FakeProps>().SetFakeProps();
 
         //ボトルを配置
-        m_bottleParent.GetComponent<BottleController>().SetBottle();
+        foreach (var bottleParent in m_bottleParent)
+        { 
+            bottleParent.GetComponent<BottleController>().SetBottle(bottleAmount);
+        }
     }
 
     public void SetDoorOpen()

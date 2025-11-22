@@ -17,6 +17,8 @@ public class GameSceneManager : MonoBehaviour
     private const int MaxRoomIndex = 6;
     private int m_currentRoomIndex;
 
+    public int CurrentRoomIndex => m_currentRoomIndex;
+
 
     private void Awake()
     {
@@ -44,12 +46,11 @@ public class GameSceneManager : MonoBehaviour
             m_currentRoomIndex = 1;
         }
 
-        Debug.Log("現在の部屋番号 : " + m_currentRoomIndex);
-
         //部屋数の上限に達していればクリア
         if (m_currentRoomIndex >= MaxRoomIndex)
         {
-            Debug.Log("ゲームクリア!!!!");
+            RoomGenerator.Instance.Innermost();
+            return;
         }
 
         //新たに部屋を生成
