@@ -13,16 +13,6 @@ public class SceneController
 {
     static private bool m_isTransition = false;
 
-    //シーンを初期状態で読み込む
-    static public void Redo(SceneType scene)
-    {
-        //既に遷移中なら受け付けない
-        if (m_isTransition) return;
-
-        //シーンの読み込み
-        SceneManager.LoadScene(SceneName(scene));
-    }
-
     //シーンの追加
     static public void Load(SceneType scene)
     {

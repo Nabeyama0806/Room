@@ -2,7 +2,7 @@ using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class CameraController : MonoBehaviour
+public class PlayerCamera : MonoBehaviour
 {
     [SerializeField] CinemachineVirtualCamera m_virtualCamera;
     [SerializeField] InputActionProperty m_lookAction;

@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 enum TextType
@@ -14,11 +15,13 @@ public class GameSceneManager : MonoBehaviour
 
     static public GameSceneManager Instance => m_instance;
 
+    [SerializeField] TextMeshProUGUI m_ui;
+
     private const int MaxRoomIndex = 6;
+    private int m_totalRoomIndex;
     private int m_currentRoomIndex;
 
     public int CurrentRoomIndex => m_currentRoomIndex;
-
 
     private void Awake()
     {
@@ -38,7 +41,11 @@ public class GameSceneManager : MonoBehaviour
     public void DeleteObject(ObjectType type)
     {
         //部屋番号の更新
+        m_totalRoomIndex++;
         m_currentRoomIndex++;
+
+        //UIの更新
+        m_ui.text = m_totalRoomIndex.ToString();
 
         //本物を削除した場合は最初から
         if (type == ObjectType.Real)
@@ -46,14 +53,16 @@ public class GameSceneManager : MonoBehaviour
             m_currentRoomIndex = 1;
         }
 
-        //部屋数の上限に達していればクリア
-        if (m_currentRoomIndex >= MaxRoomIndex)
+        //部屋数の上限に達しているか
+        if (m_currentRoomIndex > MaxRoomIndex)
         {
+            //最後の部屋を生成
             RoomGenerator.Instance.Innermost();
-            return;
         }
-
-        //新たに部屋を生成
-        RoomGenerator.Instance.Create();
+        else 
+        {
+            //続きの部屋を生成
+            RoomGenerator.Instance.Create();
+        }
     }
 }
