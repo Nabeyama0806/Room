@@ -8,7 +8,7 @@ public class RoomGenerator : MonoBehaviour
     [SerializeField] GameObject m_roomPrefab;
     [SerializeField] GameObject m_innermostRoom;
 
-    private const int RoomWidth = 32;
+    private const int RoomWidth = 16;
     private const int MaxRoomNum = 2;
 
     private int m_createCount;
@@ -31,8 +31,8 @@ public class RoomGenerator : MonoBehaviour
         room.transform.parent = transform;
         m_createCount++;
 
-        //偽物を配置
-        room.GetComponent<RoomCreate>().SetFake(GameSceneManager.Instance.CurrentRoomIndex);
+        //次の部屋を生成
+        Create();
     }
 
     public void Create()
@@ -40,11 +40,15 @@ public class RoomGenerator : MonoBehaviour
         //現在の部屋を取得
         GameObject room = transform.GetChild(m_createCount == 1 ? 0 : 1).gameObject;
 
-        //レイヤーの変更
-        room.GetComponent<RoomCreate>().ChangeTags(room.transform);
+        //現在の部屋の情報を取得
+        if (room.TryGetComponent(out RoomCreate roomCreate))
+        {
+            //レイヤーの変更
+            roomCreate.ChangeTags(room.transform);
 
-        //現在の部屋のドアを開ける
-        room.GetComponent<RoomCreate>().SetDoorOpen();
+            //現在の部屋のドアを開ける
+            room.GetComponent<RoomCreate>().SetDoorOpen();
+        }
 
         //新たに部屋を生成
         room = Instantiate(m_roomPrefab, new Vector3(0, 0, RoomWidth * m_createCount), Quaternion.Euler(0, 180, 0));

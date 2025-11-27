@@ -15,10 +15,7 @@ public class GameSceneManager : MonoBehaviour
 
     static public GameSceneManager Instance => m_instance;
 
-    [SerializeField] TextMeshProUGUI m_ui;
-
     private const int MaxRoomIndex = 6;
-    private int m_totalRoomIndex;
     private int m_currentRoomIndex;
 
     public int CurrentRoomIndex => m_currentRoomIndex;
@@ -41,11 +38,7 @@ public class GameSceneManager : MonoBehaviour
     public void DeleteObject(ObjectType type)
     {
         //部屋番号の更新
-        m_totalRoomIndex++;
         m_currentRoomIndex++;
-
-        //UIの更新
-        m_ui.text = m_totalRoomIndex.ToString();
 
         //本物を削除した場合は最初から
         if (type == ObjectType.Real)
