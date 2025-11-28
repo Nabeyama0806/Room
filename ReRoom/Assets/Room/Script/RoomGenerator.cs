@@ -53,8 +53,8 @@ public class RoomGenerator : MonoBehaviour
         room.transform.parent = transform;
         m_createCount++;
 
-        //偽物を配置
-        room.GetComponent<RoomCreate>().SetFake();
+        //異変を配置
+        room.GetComponent<RoomCreate>().SetAnomaly();
 
         //古い部屋を削除
         if (transform.childCount > MaxRoomNum)

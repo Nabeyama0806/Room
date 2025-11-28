@@ -1222,7 +1222,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c69b7545d4146bf43b33e14c95ba952e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ui: {fileID: 0}
 --- !u!1 &1906280372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,9 +1341,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea83c788880ac254b983d7072ee67be4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_firstRoom: {fileID: 3989604936693027631, guid: 1ccf4409b3db9084dbe21f01f05460ff,
+  m_firstRoom: {fileID: 6364141273677660860, guid: 24024b6dbc48d5c4b9786ba8a8151457,
     type: 3}
-  m_roomPrefab: {fileID: 145889546899198578, guid: 0f0ce205f1a0b53429bedc3f10b7ea2c,
+  m_roomPrefab: {fileID: 7427932607649628523, guid: d04c4d8fd494b8d449441f60aea31b14,
     type: 3}
   m_innermostRoom: {fileID: 0}
 --- !u!1 &2139832137

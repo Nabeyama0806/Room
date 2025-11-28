@@ -4,15 +4,25 @@ public class SoundManager
 {
     static public void Play3D(AudioClip clip, Vector3 position, float volume = 1, float pitch = 1)
     {
-        PlaySe(clip, position, 1, volume, pitch);
+        PlaySe(clip, position, 1, volume, pitch, false);
     }
 
     static public void Play2D(AudioClip clip, float volume = 1, float pitch = 1)
     {
-        PlaySe(clip, Vector3.zero, 0, volume, pitch);
+        PlaySe(clip, Vector3.zero, 0, volume, pitch, false);
     }
 
-    static void PlaySe(AudioClip clip, Vector3 position, float spatialBlend, float volume, float pitch)
+    static public GameObject PlayLoop3D(AudioClip clip, Vector3 position, float volume = 1, float pitch = 1)
+    {
+        return PlaySe(clip, position, 1, volume, pitch, true);
+    }
+
+    static public GameObject PlayLoop2D(AudioClip clip, float volume = 1, float pitch = 1)
+    {
+        return PlaySe(clip, Vector3.zero, 0, volume, pitch, true);
+    }
+
+    static GameObject PlaySe(AudioClip clip, Vector3 position, float spatialBlend, float volume, float pitch, bool isLoop)
     {
         GameObject obj = new GameObject(clip.name);
 
@@ -20,12 +30,16 @@ public class SoundManager
         audio.clip = clip;
         audio.transform.position = position;
         audio.spatialBlend = spatialBlend;
-        audio.loop = false;
+        audio.loop = isLoop;
         audio.volume = volume;
         audio.pitch = pitch;
 
         audio.Play();
 
-        MonoBehaviour.Destroy(obj, clip.length * (1.0f / pitch));
+        //再生終了後にオブジェクトを破棄
+        if (!isLoop) MonoBehaviour.Destroy(obj, clip.length * (1.0f / pitch));
+
+        //再生停止用にオブジェクトを返す
+        return obj;
     }
 }
