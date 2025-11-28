@@ -39,15 +39,13 @@ public class RoomGenerator : MonoBehaviour
     {
         //現在の部屋を取得
         GameObject room = transform.GetChild(m_createCount == 1 ? 0 : 1).gameObject;
-
-        //現在の部屋の情報を取得
         if (room.TryGetComponent(out RoomCreate roomCreate))
         {
-            //レイヤーの変更
-            roomCreate.ChangeTags(room.transform);
+            //オブジェクトを固定する
+            roomCreate.Lock();
 
             //現在の部屋のドアを開ける
-            room.GetComponent<RoomCreate>().SetDoorOpen();
+            room.GetComponent<RoomCreate>().DoorOpen();
         }
 
         //新たに部屋を生成
@@ -56,7 +54,7 @@ public class RoomGenerator : MonoBehaviour
         m_createCount++;
 
         //偽物を配置
-        room.GetComponent<RoomCreate>().SetFake(GameSceneManager.Instance.CurrentRoomIndex);
+        room.GetComponent<RoomCreate>().SetFake();
 
         //古い部屋を削除
         if (transform.childCount > MaxRoomNum)
@@ -70,7 +68,7 @@ public class RoomGenerator : MonoBehaviour
         //現在の部屋のドアを開ける
         if (m_createCount > 0)
         {
-            transform.GetChild(transform.childCount - 1).GetComponent<RoomCreate>().SetDoorOpen();
+            transform.GetChild(transform.childCount - 1).GetComponent<RoomCreate>().DoorOpen();
         }
 
         //新たに部屋を生成

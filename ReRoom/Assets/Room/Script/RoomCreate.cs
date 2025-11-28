@@ -3,10 +3,13 @@ using UnityEngine;
 public class RoomCreate : MonoBehaviour
 {
     [SerializeField] GameObject[] m_fakeObjectList;
+    [SerializeField] Props[] m_props;
     [SerializeField] GameObject m_bottleParent;
-    [SerializeField] GameObject m_doorParent;
+    [SerializeField] DoorController m_door;
 
-    public void SetFake(int bottleAmount)
+    private int m_index;
+
+    public void SetFake()
     {
         //全て非表示
         foreach (var fake in m_fakeObjectList)
@@ -14,29 +17,25 @@ public class RoomCreate : MonoBehaviour
             fake.SetActive(false);
         }
 
-        //偽物をランダムに配置
-        int index = Random.Range(0, m_fakeObjectList.Length);
-        m_fakeObjectList[index].SetActive(true);
-        m_fakeObjectList[index].GetComponent<FakeProps>().SetFakeProps();
+        //偽物を配置
+        if(GameSceneManager.Instance.IsNext) m_index = Random.Range(0, m_fakeObjectList.Length);
+        m_fakeObjectList[m_index].SetActive(true);
+        m_fakeObjectList[m_index].GetComponent<FakeProps>().SetFakeProps();
 
         //ボトルを配置
-        m_bottleParent.GetComponent<BottleController>().SetBottle(bottleAmount);
+        m_bottleParent.GetComponent<BottleController>().SetBottle();
     }
 
-    public void SetDoorOpen()
+    public void DoorOpen()
     {
-        m_doorParent.GetComponent<DoorParent>().OpenDoor();
+        m_door.CanOpen = true;
     }
 
-    public void ChangeTags(Transform parent)
+    public void Lock()
     {
-        foreach (Transform child in parent)
+        foreach (var prop in m_props)
         {
-            //子オブジェクトのタグを変更
-            child.tag = gameObject.tag;
-
-            //さらにその子オブジェクトもタグを変更    
-            ChangeTags(child);
+            prop.Type = ObjectType.Lock;
         }
     }
 }

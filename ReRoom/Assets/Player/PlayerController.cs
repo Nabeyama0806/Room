@@ -76,13 +76,16 @@ public class PlayerController : MonoBehaviour
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out var hit))
         {
             //壁や床は無視する
-            if (!hit.transform.gameObject.CompareTag("Props")) return;
+            if (!hit.transform.TryGetComponent<Props>(out var props)) return;
+
+            //固定のオブジェクトは無視する
+            if (props.Type == ObjectType.Lock) return;
 
             //弾の発射
             m_revolver.GetComponent<RevolverController>().Shot(hit.point);
 
             //当たったオブジェクトの処理
-            hit.transform.gameObject.GetComponent<Props>().Hit();
+            props.Hit();
         }
     }
 

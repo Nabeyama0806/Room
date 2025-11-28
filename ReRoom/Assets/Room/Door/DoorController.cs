@@ -18,11 +18,12 @@ public class DoorController : MonoBehaviour
     private void Start()
     {
         m_animator = GetComponent<Animator>();
-        m_isOpen = false;
     }
 
     private void Update()
     {
+        Debug.DrawRay(transform.position + RayOffset, transform.forward * RayLength, Color.yellow);
+
         //ƒhƒA‚ªŠJ‚¯‚ç‚ê‚éó‘Ô‚Å‚È‚¯‚ê‚Î‰½‚à‚µ‚È‚¢
         if (!m_canOpen) return;
 

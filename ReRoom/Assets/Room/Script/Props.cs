@@ -2,8 +2,9 @@ using UnityEngine;
 
 public enum ObjectType
 {
-    Real,
+    Real, 
     Fake,
+    Lock,
 
     Length,
 }
@@ -12,7 +13,11 @@ public class Props : MonoBehaviour
 {
     [SerializeField] ObjectType m_type;
 
-    public ObjectType Type => m_type;
+    public ObjectType Type
+    {
+        get { return m_type; }
+        set { m_type = value; }
+    }
 
     public void Hit()
     {

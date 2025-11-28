@@ -4,7 +4,7 @@ public class BottleController : MonoBehaviour
 {
     [SerializeField] GameObject[] m_bottles;
 
-    public void SetBottle(int bottleAmount)
+    public void SetBottle()
     {
         //全て非表示
         foreach (var bottle in m_bottles)
@@ -12,8 +12,8 @@ public class BottleController : MonoBehaviour
             bottle.SetActive(false);
         }
 
-        //指定の数だけ表示
-        for(int i = 0; i < bottleAmount; ++i)
+        //進んだ部屋の数だけ表示
+        for(int i = 0; i < GameSceneManager.Instance.CurrentRoomIndex; ++i)
         {
             m_bottles[i].SetActive(true);
         }
