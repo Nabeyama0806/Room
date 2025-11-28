@@ -7,8 +7,6 @@ public class RoomCreate : MonoBehaviour
     [SerializeField] GameObject m_bottleParent;
     [SerializeField] DoorController m_door;
 
-    private int m_index;
-
     public void SetFake()
     {
         //全て非表示
@@ -18,9 +16,9 @@ public class RoomCreate : MonoBehaviour
         }
 
         //偽物を配置
-        if(GameSceneManager.Instance.IsNext) m_index = Random.Range(0, m_fakeObjectList.Length);
-        m_fakeObjectList[m_index].SetActive(true);
-        m_fakeObjectList[m_index].GetComponent<FakeProps>().SetFakeProps();
+        int index = Random.Range(0, m_fakeObjectList.Length);
+        m_fakeObjectList[index].SetActive(true);
+        m_fakeObjectList[index].GetComponent<FakeProps>().SetFakeProps();
 
         //ボトルを配置
         m_bottleParent.GetComponent<BottleController>().SetBottle();

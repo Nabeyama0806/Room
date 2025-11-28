@@ -2,9 +2,9 @@ using UnityEngine;
 
 public enum ObjectType
 {
-    Real, 
-    Fake,
-    Lock,
+    Normal,     //’Êí
+    Anomaly,    //ˆÙí
+    Lock,       //ŒÅ’è
 
     Length,
 }

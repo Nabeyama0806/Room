@@ -17,11 +17,8 @@ public class GameSceneManager : MonoBehaviour
 
     private const int MaxRoomIndex = 6;
     private int m_currentRoomIndex;
-    bool m_isNext;
 
     public int CurrentRoomIndex => m_currentRoomIndex;
-
-    public bool IsNext => m_isNext;
 
     private void Awake()
     {
@@ -30,7 +27,6 @@ public class GameSceneManager : MonoBehaviour
 
         //‰Šú‰»
         m_currentRoomIndex = 1;
-        m_isNext = true;
     }
 
     private void Start()
@@ -42,16 +38,9 @@ public class GameSceneManager : MonoBehaviour
     public void DeleteObject(ObjectType type)
     {
         //³‰ğ‚µ‚½‚çŸ‚Ì•”‰®‚Ö
-        switch(type)
+        if(type == ObjectType.Anomaly)
         {
-            case ObjectType.Fake:
-                m_currentRoomIndex++;
-                m_isNext = true;
-                break;
-
-            case ObjectType.Real:
-                m_isNext = false;
-                break;
+            m_currentRoomIndex++;
         }
 
         //•”‰®”‚ÌãŒÀ‚É’B‚µ‚Ä‚¢‚é‚©
