@@ -191,7 +191,6 @@ GameObject:
   - component: {fileID: 5811192886357264036}
   - component: {fileID: 4779071986821174833}
   - component: {fileID: 4516833329171963308}
-  - component: {fileID: 1842041826658512085}
   m_Layer: 0
   m_Name: ceramic_sink
   m_TagString: Untagged
@@ -329,19 +328,6 @@ CapsuleCollider:
   m_Height: 110
   m_Direction: 1
   m_Center: {x: 0, y: 55, z: -15}
---- !u!114 &1842041826658512085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 81843162536559924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_type: 0
 --- !u!1 &145889546899198578
 GameObject:
   m_ObjectHideFlags: 0
@@ -1114,7 +1100,6 @@ GameObject:
   - component: {fileID: 3681679958004469626}
   - component: {fileID: 3031715951500322343}
   - component: {fileID: 5852424729840700363}
-  - component: {fileID: 8394530870872220463}
   m_Layer: 0
   m_Name: ceiling_light (1)
   m_TagString: Props
@@ -1209,19 +1194,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 38.111572, y: 8.47673, z: 150}
   m_Center: {x: 0, y: -4.238365, z: 0}
---- !u!114 &8394530870872220463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 608797530409851002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_type: 0
 --- !u!1 &619046030792048056
 GameObject:
   m_ObjectHideFlags: 0
@@ -1791,7 +1763,6 @@ GameObject:
   - component: {fileID: 4774451477643663674}
   - component: {fileID: 2091436109135473607}
   - component: {fileID: 2553935892993550772}
-  - component: {fileID: 9122388102257231970}
   m_Layer: 0
   m_Name: table
   m_TagString: Untagged
@@ -1885,19 +1856,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 124.96545, y: 104.74158, z: 269.7431}
   m_Center: {x: 0, y: 52.37079, z: 0}
---- !u!114 &9122388102257231970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 826335787446723483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_type: 0
 --- !u!1 &945442146048696556
 GameObject:
   m_ObjectHideFlags: 0
@@ -6105,7 +6063,6 @@ GameObject:
   - component: {fileID: 7364926281801135803}
   - component: {fileID: 5452747983220518642}
   - component: {fileID: 5775244370186468022}
-  - component: {fileID: 6009244378410273484}
   m_Layer: 0
   m_Name: metal_sink
   m_TagString: Untagged
@@ -6199,19 +6156,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 540.16974, y: 122.63156, z: 100.36606}
   m_Center: {x: 0.000023841856, y: 61.31578, z: -2.842171e-12}
---- !u!114 &6009244378410273484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3074479899826159173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_type: 0
 --- !u!1 &3260871344377901904
 GameObject:
   m_ObjectHideFlags: 0
@@ -9231,7 +9175,6 @@ GameObject:
   - component: {fileID: 7680986056291345409}
   - component: {fileID: 7725359064150145843}
   - component: {fileID: 8499286645940429823}
-  - component: {fileID: 1952329995020151674}
   m_Layer: 0
   m_Name: ceiling_light (2)
   m_TagString: Props
@@ -9326,19 +9269,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 38.111572, y: 8.47673, z: 150}
   m_Center: {x: 0, y: -4.238365, z: 0}
---- !u!114 &1952329995020151674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4492123421541591830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_type: 0
 --- !u!1 &4498765885044821449
 GameObject:
   m_ObjectHideFlags: 0
@@ -10682,7 +10612,6 @@ GameObject:
   - component: {fileID: 90350310668491558}
   - component: {fileID: 857190200463395082}
   - component: {fileID: 2107225738675016399}
-  - component: {fileID: 3369589848347878806}
   m_Layer: 0
   m_Name: ceiling_light
   m_TagString: Props
@@ -10777,19 +10706,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 38.111572, y: 8.47673, z: 150}
   m_Center: {x: 0, y: -4.238365, z: 0}
---- !u!114 &3369589848347878806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4919917397968709128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_type: 0
 --- !u!1 &4943352668742624755
 GameObject:
   m_ObjectHideFlags: 0
@@ -11172,7 +11088,6 @@ GameObject:
   - component: {fileID: 6164431966130343263}
   - component: {fileID: 266010919731006574}
   - component: {fileID: 2196316809444212197}
-  - component: {fileID: 7089468885439621181}
   m_Layer: 0
   m_Name: autopsy_table
   m_TagString: Untagged
@@ -11287,19 +11202,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 150, y: 110, z: 100}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7089468885439621181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5175410565992627513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_type: 0
 --- !u!1 &5253464804099874051
 GameObject:
   m_ObjectHideFlags: 0
@@ -13267,7 +13169,6 @@ GameObject:
   - component: {fileID: 1616564253183227469}
   - component: {fileID: 240344900939318641}
   - component: {fileID: 1374927900901655381}
-  - component: {fileID: 720216627471031927}
   m_Layer: 0
   m_Name: autopsy_table
   m_TagString: Untagged
@@ -13382,19 +13283,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 150, y: 110, z: 100}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &720216627471031927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6147087470083794412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_type: 0
 --- !u!1 &6392560148544237183
 GameObject:
   m_ObjectHideFlags: 0
@@ -14494,7 +14382,6 @@ GameObject:
   - component: {fileID: 4778016730535454058}
   - component: {fileID: 5346599894652258813}
   - component: {fileID: 7025446485292811307}
-  - component: {fileID: 9045603691417875084}
   m_Layer: 0
   m_Name: steel_worktop
   m_TagString: Untagged
@@ -14588,19 +14475,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 184.1043, y: 118.60727, z: 100.36604}
   m_Center: {x: -0.0010013579, y: 59.303635, z: -1.1937118e-10}
---- !u!114 &9045603691417875084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7282887503877898090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_type: 0
 --- !u!1 &7288643355799738581
 GameObject:
   m_ObjectHideFlags: 0
@@ -18066,7 +17940,6 @@ GameObject:
   - component: {fileID: 4540219667275802982}
   - component: {fileID: 231703903994763641}
   - component: {fileID: 3840959527226505152}
-  - component: {fileID: 4763208905008885352}
   m_Layer: 0
   m_Name: ceiling_light (3)
   m_TagString: Props
@@ -18161,19 +18034,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 38.111572, y: 8.47673, z: 150}
   m_Center: {x: 0, y: -4.238365, z: 0}
---- !u!114 &4763208905008885352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8984863893187050294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_type: 0
 --- !u!1 &9103823348963137314
 GameObject:
   m_ObjectHideFlags: 0

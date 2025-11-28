@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 602547585638561781}
   - component: {fileID: 1481620703654425775}
   - component: {fileID: 8678605537253242853}
-  - component: {fileID: 3126544100208276548}
   m_Layer: 0
   m_Name: ceiling_light
   m_TagString: Props
@@ -107,19 +106,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 38.111572, y: 8.47673, z: 150}
   m_Center: {x: 0, y: -4.238365, z: 0}
---- !u!114 &3126544100208276548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 251804954216713284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_type: 0
 --- !u!1 &260138834238038895
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,7 +422,6 @@ GameObject:
   - component: {fileID: 5934493743462271869}
   - component: {fileID: 6402250144992963126}
   - component: {fileID: 1864201320388840028}
-  - component: {fileID: 4735694801020431695}
   m_Layer: 0
   m_Name: ceiling_light (2)
   m_TagString: Props
@@ -531,19 +516,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 38.111572, y: 8.47673, z: 150}
   m_Center: {x: 0, y: -4.238365, z: 0}
---- !u!114 &4735694801020431695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503029723233534522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_type: 0
 --- !u!1 &781782954890779688
 GameObject:
   m_ObjectHideFlags: 0
@@ -3580,7 +3552,6 @@ GameObject:
   - component: {fileID: 9188735420884325218}
   - component: {fileID: 1843556163791580394}
   - component: {fileID: 7100764901345698878}
-  - component: {fileID: 6836491474637492172}
   m_Layer: 0
   m_Name: ceiling_light (3)
   m_TagString: Props
@@ -3675,19 +3646,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 38.111572, y: 8.47673, z: 150}
   m_Center: {x: 0, y: -4.238365, z: 0}
---- !u!114 &6836491474637492172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3732204450899777933}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_type: 0
 --- !u!1 &3874012075424394748
 GameObject:
   m_ObjectHideFlags: 0
@@ -4059,7 +4017,6 @@ GameObject:
   - component: {fileID: 5563159966203013908}
   - component: {fileID: 4374625889328318303}
   - component: {fileID: 7024399637676692912}
-  - component: {fileID: 9143897555377559645}
   m_Layer: 0
   m_Name: ceiling_light (1)
   m_TagString: Props
@@ -4154,19 +4111,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 38.111572, y: 8.47673, z: 150}
   m_Center: {x: 0, y: -4.238365, z: 0}
---- !u!114 &9143897555377559645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4316762773891105136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f52d0f3ef20549246b3e68cf6a595a11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_type: 0
 --- !u!1 &4397128393075478156
 GameObject:
   m_ObjectHideFlags: 0
