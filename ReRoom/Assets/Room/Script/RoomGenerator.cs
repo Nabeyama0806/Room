@@ -4,7 +4,6 @@ public class RoomGenerator : MonoBehaviour
 {
     static RoomGenerator m_instance;
 
-    [SerializeField] GameObject m_firstRoom;
     [SerializeField] GameObject m_roomPrefab;
     [SerializeField] GameObject m_innermostRoom;
 
@@ -27,7 +26,7 @@ public class RoomGenerator : MonoBehaviour
     public void Initialize()
     {
         //最初の部屋を生成
-        GameObject room = Instantiate(m_firstRoom, new Vector3(0, 0, RoomWidth * m_createCount), Quaternion.Euler(0, 180, 0));
+        GameObject room = Instantiate(m_roomPrefab, new Vector3(0, 0, RoomWidth * m_createCount), Quaternion.Euler(0, 180, 0));
         room.transform.parent = transform;
         m_createCount++;
 
@@ -39,13 +38,13 @@ public class RoomGenerator : MonoBehaviour
     {
         //現在の部屋を取得
         GameObject room = transform.GetChild(m_createCount == 1 ? 0 : 1).gameObject;
-        if (room.TryGetComponent(out RoomCreate roomCreate))
+        if (room.TryGetComponent(out RoomController roomCreate))
         {
             //オブジェクトを固定する
             roomCreate.Lock();
 
             //現在の部屋のドアを開ける
-            room.GetComponent<RoomCreate>().DoorOpen();
+            room.GetComponent<RoomController>().DoorOpen();
         }
 
         //新たに部屋を生成
@@ -54,7 +53,7 @@ public class RoomGenerator : MonoBehaviour
         m_createCount++;
 
         //異変を配置
-        room.GetComponent<RoomCreate>().SetAnomaly();
+        room.GetComponent<RoomController>().SetAnomaly();
 
         //古い部屋を削除
         if (transform.childCount > MaxRoomNum)
@@ -68,7 +67,7 @@ public class RoomGenerator : MonoBehaviour
         //現在の部屋のドアを開ける
         if (m_createCount > 0)
         {
-            transform.GetChild(transform.childCount - 1).GetComponent<RoomCreate>().DoorOpen();
+            transform.GetChild(transform.childCount - 1).GetComponent<RoomController>().DoorOpen();
         }
 
         //新たに部屋を生成

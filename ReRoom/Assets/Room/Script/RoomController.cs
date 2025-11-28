@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RoomCreate : MonoBehaviour
+public class RoomController : MonoBehaviour
 {
     [SerializeField] Props[] m_props;
     [SerializeField] BottleController m_bottleParent;
@@ -10,7 +10,10 @@ public class RoomCreate : MonoBehaviour
     {
         //異変を配置
         int index = Random.Range(0, m_props.Length);
-        m_props[index].GetComponent<Props>().Type = ObjectType.Anomaly;
+        foreach (var prop in m_props)
+        {
+            prop.Type = ObjectType.Anomaly;
+        }
 
         //ボトルを配置
         m_bottleParent.SetBottle();
