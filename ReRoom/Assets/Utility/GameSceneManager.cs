@@ -37,13 +37,11 @@ public class GameSceneManager : MonoBehaviour
 
     public void DeleteObject(ObjectType type)
     {
-        //部屋番号の更新
-        m_currentRoomIndex++;
-
-        //本物を削除した場合は最初から
-        if (type == ObjectType.Real)
+        //正解したら次の部屋へ
+        if (type == ObjectType.Fake)
         {
-            m_currentRoomIndex = 1;
+            //部屋番号の更新
+            m_currentRoomIndex++;
         }
 
         //部屋数の上限に達しているか
