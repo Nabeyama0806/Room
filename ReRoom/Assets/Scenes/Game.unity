@@ -1341,8 +1341,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea83c788880ac254b983d7072ee67be4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_firstRoom: {fileID: 6364141273677660860, guid: 24024b6dbc48d5c4b9786ba8a8151457,
-    type: 3}
   m_roomPrefab: {fileID: 7427932607649628523, guid: d04c4d8fd494b8d449441f60aea31b14,
     type: 3}
   m_innermostRoom: {fileID: 0}

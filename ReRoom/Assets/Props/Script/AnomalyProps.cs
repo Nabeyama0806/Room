@@ -8,6 +8,7 @@ public enum AnomalyType
     Shaking,        //振動
     Flicker,        //点滅
     Floating,       //浮遊
+    Look,           //凝視
 
     Length,
 }
@@ -17,7 +18,7 @@ public class AnomalyProps : Props
     private void Start()
     {
         //異変オブジェクトでなければ処理を行わない
-        if (Type == ObjectType.Normal) return;
+        if (Type != ObjectType.Anomaly) return;
 
         //異変の種類に応じた処理を実行
         StartExecute();
@@ -25,10 +26,8 @@ public class AnomalyProps : Props
 
     private void FixedUpdate()
     {
-        Debug.Log(Type);
-
         //異変オブジェクトでなければ処理を行わない
-        if (Type == ObjectType.Normal) return;
+        if (Type != ObjectType.Anomaly) return;
 
         //異変の種類に応じた処理を更新
         UpdateExecute();

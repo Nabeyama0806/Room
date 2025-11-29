@@ -10,10 +10,7 @@ public class RoomController : MonoBehaviour
     {
         //異変を配置
         int index = Random.Range(0, m_props.Length);
-        foreach (var prop in m_props)
-        {
-            prop.Type = ObjectType.Anomaly;
-        }
+        m_props[index].Type = ObjectType.Anomaly;
 
         //ボトルを配置
         m_bottleParent.SetBottle();
