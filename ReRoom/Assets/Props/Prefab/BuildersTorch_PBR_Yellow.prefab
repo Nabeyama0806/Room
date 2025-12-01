@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33949273067851562}
   - component: {fileID: 23858364735411824}
   - component: {fileID: 2896901203385858773}
-  - component: {fileID: 7350825637497340430}
   m_Layer: 0
   m_Name: BuildersTorch_PBR_Yellow
   m_TagString: Untagged
@@ -107,16 +106,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.4, y: 0.2, z: 0.2}
   m_Center: {x: 0.08, y: 0, z: -0.15}
---- !u!114 &7350825637497340430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1450602116203488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52b1b651c55ae5040a77ddaed304a2eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_type: 0

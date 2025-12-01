@@ -12,4 +12,13 @@ public class StrangeSound : AnomalyProps
         m_soundObject = SoundManager.PlayLoop3D(m_sound, transform.position);
         m_soundObject.transform.parent = transform;
     }
+
+    private void FixedUpdate()
+    {
+        //ŒÅ’è‰»‚³‚ê‚½‚çÄ¶‚ğ’â~
+        if (Type == ObjectType.Lock)
+        {
+            Destroy(m_soundObject);
+        }
+    }
 }

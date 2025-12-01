@@ -19,6 +19,6 @@ public class Look : AnomalyProps
         dir.y = 0;
         dir.Normalize();
         Quaternion lookRot = Quaternion.LookRotation(dir);
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookRot, 0.05f);
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRot, 0.2f);
     }
 }

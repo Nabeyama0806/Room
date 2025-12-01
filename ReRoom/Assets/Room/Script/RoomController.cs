@@ -12,6 +12,8 @@ public class RoomController : MonoBehaviour
         int index = Random.Range(0, m_props.Length);
         m_props[index].Type = ObjectType.Anomaly;
 
+        Debug.Log("[異変設置] 名前 : " + m_props[index].name);
+
         //ボトルを配置
         m_bottleParent.SetBottle();
     }
