@@ -22,8 +22,6 @@ public class DoorController : MonoBehaviour
 
     private void Update()
     {
-        Debug.DrawRay(transform.position + RayOffset, transform.forward * RayLength, Color.yellow);
-
         //ドアが開けられる状態でなければ何もしない
         if (!m_canOpen) return;
 
@@ -42,5 +40,12 @@ public class DoorController : MonoBehaviour
 
         //アニメーションの更新
         m_animator.SetBool("Open", m_isOpen);
+
+        //最深部のドアが開いたらリザルトシーンに遷移
+        if (m_isOpen && transform.root.CompareTag("InnermostRoom"))
+        {
+            Debug.Log("遷移");
+            SceneController.Transition(SceneType.Game, SceneType.Result);
+        }
     }
 }

@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 
 enum TextType
@@ -54,5 +53,10 @@ public class GameSceneManager : MonoBehaviour
             //‘±‚«‚Ì•”‰®‚ğ¶¬
             RoomGenerator.Instance.Create();
         }
+    }
+
+    public void SceneChange(SceneType nextScene)
+    {
+        SceneController.Transition(SceneType.Game, nextScene);
     }
 }

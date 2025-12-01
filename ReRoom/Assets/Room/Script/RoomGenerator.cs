@@ -64,15 +64,10 @@ public class RoomGenerator : MonoBehaviour
 
     public void Innermost()
     {
-        //現在の部屋のドアを開ける
-        if (m_createCount > 0)
-        {
-            transform.GetChild(transform.childCount - 1).GetComponent<RoomController>().DoorOpen();
-        }
+        //部屋のドアを開ける
+        transform.GetChild(transform.childCount - 1).GetComponent<RoomController>().DoorOpen();
 
         //新たに部屋を生成
-        GameObject room = Instantiate(m_innermostRoom, new Vector3(0, 0, RoomWidth * m_createCount), Quaternion.Euler(0, 180, 0));
-        room.transform.parent = transform;
-        m_createCount++;
+        Instantiate(m_innermostRoom, new Vector3(0, 0, RoomWidth * m_createCount), Quaternion.Euler(0, 180, 0));
     }
 }
