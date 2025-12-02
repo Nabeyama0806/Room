@@ -5,10 +5,11 @@ public class RoomGenerator : MonoBehaviour
     static RoomGenerator m_instance;
 
     [SerializeField] GameObject m_roomPrefab;
+    [SerializeField] GameObject m_firstRoom;
     [SerializeField] GameObject m_innermostRoom;
 
     private const int RoomWidth = 16;
-    private const int MaxRoomNum = 2;
+    private const int MaxRoomNum = 3;
 
     private int m_createCount;
 
@@ -37,7 +38,8 @@ public class RoomGenerator : MonoBehaviour
     public void Create()
     {
         //現在の部屋を取得
-        GameObject room = transform.GetChild(m_createCount == 1 ? 0 : 1).gameObject;
+        int roomIndex = m_createCount <= MaxRoomNum ? m_createCount - 1 : MaxRoomNum - 1;
+        GameObject room = transform.GetChild(roomIndex).gameObject;
         if (room.TryGetComponent(out RoomController roomCreate))
         {
             //オブジェクトを固定する

@@ -1,9 +1,10 @@
+using TMPro;
 using UnityEngine;
 
 public class RoomController : MonoBehaviour
 {
     [SerializeField] Props[] m_props;
-    [SerializeField] BottleController m_bottleParent;
+    [SerializeField] TextMeshProUGUI m_uiRoomNumber;
     [SerializeField] DoorController m_door;
 
     public void SetAnomaly()
@@ -12,10 +13,10 @@ public class RoomController : MonoBehaviour
         int index = Random.Range(0, m_props.Length);
         m_props[index].Type = ObjectType.Anomaly;
 
-        Debug.Log("[異変設置] 名前 : " + m_props[index].name);
+        //Debug.Log("[異変設置] 名前 : " + m_props[index].name);
 
-        //ボトルを配置
-        m_bottleParent.SetBottle();
+        //部屋番号の表示
+        m_uiRoomNumber.text = GameSceneManager.Instance.CurrentRoomIndex.ToString("D1") + "号室";
     }
 
     public void DoorOpen()
