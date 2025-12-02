@@ -44,7 +44,6 @@ public class DoorController : MonoBehaviour
         //最深部のドアが開いたらリザルトシーンに遷移
         if (m_isOpen && transform.root.CompareTag("InnermostRoom"))
         {
-            Debug.Log("遷移");
             SceneController.Transition(SceneType.Game, SceneType.Result);
         }
     }

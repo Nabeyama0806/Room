@@ -16,7 +16,7 @@ public class RoomController : MonoBehaviour
         //Debug.Log("[ˆÙ•Ïİ’u] –¼‘O : " + m_props[index].name);
 
         //•”‰®”Ô†‚Ì•\¦
-        m_uiRoomNumber.text = GameSceneManager.Instance.CurrentRoomIndex.ToString("D1") + "†º";
+        m_uiRoomNumber.text = GameSceneManager.Instance.CurrentRoomIndex.ToString("D1");
     }
 
     public void DoorOpen()
