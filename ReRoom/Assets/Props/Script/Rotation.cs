@@ -2,17 +2,8 @@ using UnityEngine;
 
 public class Rotation : AnomalyProps
 {
-    private enum Rotate
-    {
-        X,
-        Y,
-        Z,
-
-        Length,
-    }
-
     [SerializeField] Rotate m_rotate;
-    [SerializeField] float m_speed = 90f;
+    [SerializeField] float m_speed = 9;
 
     public override void UpdateExecute()
     {

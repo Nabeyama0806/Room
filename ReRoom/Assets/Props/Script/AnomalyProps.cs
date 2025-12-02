@@ -13,6 +13,15 @@ public enum AnomalyType
     Length,
 }
 
+public enum Rotate
+{
+    X,
+    Y,
+    Z,
+
+    Length,
+}
+
 public class AnomalyProps : Props
 {
     private void Start()
