@@ -1,7 +1,6 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class Duplicate : Props
+public class Appearance : Props
 {
     [SerializeField] GameObject[] m_object;
 
