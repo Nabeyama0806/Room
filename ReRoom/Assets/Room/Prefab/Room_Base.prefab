@@ -11309,6 +11309,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 234570270216683082}
     m_Modifications:
+    - target: {fileID: -1464000101251991071, guid: 118d794af50d44affb397ac6d1b6a89b,
+        type: 3}
+      propertyPath: m_volume
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 1513596015828096, guid: 118d794af50d44affb397ac6d1b6a89b, type: 3}
       propertyPath: m_Name
       value: CRTMonitor
@@ -11396,6 +11401,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Radio
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535956425975572012, guid: a5692252a65d2784fad5bd6673ab750f,
+        type: 3}
+      propertyPath: m_volume
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4265502871271991535, guid: a5692252a65d2784fad5bd6673ab750f,
         type: 3}
