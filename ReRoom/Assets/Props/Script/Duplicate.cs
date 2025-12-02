@@ -1,11 +1,15 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class Duplicate : AnomalyProps
+public class Duplicate : Props
 {
     [SerializeField] GameObject[] m_object;
 
-    public override void StartExecute()
+    protected override void StartExecute()
     {
+        //当たり判定を有効化
+        GetComponent<Collider>().enabled = true;
+
         //オブジェクトを表示する
         foreach (var obj in m_object)
         {

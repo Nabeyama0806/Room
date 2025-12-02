@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Enlarged : AnomalyProps
+public class Enlarged : Props
 {
     [SerializeField] float m_maxScale = 1.8f;
     [SerializeField] float m_speed = 0.02f;
@@ -15,7 +15,7 @@ public class Enlarged : AnomalyProps
         targetScale = startScale * m_maxScale;
     }
 
-    public override void UpdateExecute()
+    protected override void UpdateExecute()
     {
         if (t >= 1f) return;
 

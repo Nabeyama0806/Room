@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Floating : AnomalyProps
+public class Floating : Props
 {
     [SerializeField] float m_amplitude = 0.2f;      // è„â∫ÇÃïù
     [SerializeField] float m_speedMin = 0.5f;       // ç≈è¨ë¨ìx
@@ -33,7 +33,7 @@ public class Floating : AnomalyProps
         );
     }
 
-    public override void UpdateExecute()
+    protected override void UpdateExecute()
     {
         float t = Time.time * m_speed + m_offset;
 

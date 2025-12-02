@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Shaking : AnomalyProps
+public class Shaking : Props
 {
     [SerializeField] float amplitude = 0.05f;       //Šî–{—h‚ê•
     [SerializeField] float speed = 1.2f;            //‹K‘¥“I—h‚ê‘¬“x
@@ -17,7 +17,7 @@ public class Shaking : AnomalyProps
         basePos = transform.localPosition;  //‰ŠúˆÊ’u‚ğ•Û
     }
 
-    public override void UpdateExecute()
+    protected override void UpdateExecute()
     {
         float t = Time.time;
 

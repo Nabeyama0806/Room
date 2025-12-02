@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Human : AnomalyProps
+public class Human : Props
 {
     [SerializeField] Animator m_animator;
 
-    public override void StartExecute()
+    protected override void StartExecute()
     {
         //アニメーションを変更
         m_animator.SetTrigger("Anomaly");

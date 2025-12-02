@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Flicker : AnomalyProps
+public class Flicker : Props
 {
     [SerializeField] GameObject m_target;
     [SerializeField] float m_minInterval = 0.05f;
@@ -15,7 +15,7 @@ public class Flicker : AnomalyProps
         m_nextTime = Random.Range(m_minInterval, m_maxInterval);
     }
 
-    public override void UpdateExecute()
+    protected override void UpdateExecute()
     {
         m_timer += Time.deltaTime;
 

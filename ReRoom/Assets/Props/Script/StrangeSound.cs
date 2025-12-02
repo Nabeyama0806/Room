@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class StrangeSound : AnomalyProps
+public class StrangeSound : Props
 {
     [SerializeField] AudioClip m_sound;
 
     private GameObject m_soundObject;
 
-    public override void StartExecute()
+    protected override void StartExecute()
     {
         //ÉãÅ[Évçƒê∂
         m_soundObject = SoundManager.PlayLoop3D(m_sound, transform.position);

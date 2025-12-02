@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class Flip : AnomalyProps
+public class Flip : Props
 {
     [SerializeField] Rotate m_rotate;
 
-    public override void StartExecute()
+    protected override void StartExecute()
     {
         //オブジェクトを反転させる
         switch (m_rotate)

@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class Rotation : AnomalyProps
+public class Rotation : Props
 {
     [SerializeField] Rotate m_rotate;
     [SerializeField] float m_speed = 9;
 
-    public override void UpdateExecute()
+    protected override void UpdateExecute()
     {
         Vector3 axis = Vector3.zero;
 

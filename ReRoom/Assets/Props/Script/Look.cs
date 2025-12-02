@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Look : AnomalyProps
+public class Look : Props
 {
     private GameObject m_player;
 
@@ -12,7 +10,7 @@ public class Look : AnomalyProps
         m_player = GameObject.FindWithTag("Player");
     }
 
-    public override void UpdateExecute()
+    protected override void UpdateExecute()
     {
         //í‚ÉƒvƒŒƒCƒ„[‚Ì•û‚ğŒü‚­
         Vector3 dir = m_player.transform.position - transform.position;
