@@ -15,7 +15,7 @@ public class GameSceneManager : MonoBehaviour
 
     static public GameSceneManager Instance => m_instance;
 
-    private const int MaxRoomIndex = 2;
+    private const int MaxRoomIndex = 6;
     private List<int> m_indexList;
     private int m_currentRoomIndex;
 

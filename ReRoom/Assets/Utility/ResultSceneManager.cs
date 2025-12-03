@@ -25,6 +25,6 @@ public class ResultSceneManager : MonoBehaviour
         yield return new WaitForSeconds(3.0f);
 
         //ƒV[ƒ“‘JˆÚ
-        SceneController.Transition(SceneType.Result, SceneType.Game);
+        SceneController.Transition(SceneType.Result, SceneType.Title);
     }
 }

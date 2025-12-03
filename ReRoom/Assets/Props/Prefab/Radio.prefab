@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 909102422819628874}
   - component: {fileID: 3132588478132163456}
   - component: {fileID: 792291407338946431}
-  - component: {fileID: 3535956425975572012}
+  - component: {fileID: -2792813717901263257}
   m_Layer: 0
   m_Name: Radio
   m_TagString: Untagged
@@ -106,7 +106,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.2551188, y: 0.18092112, z: 0.07590066}
   m_Center: {x: -0.001319088, y: 0.09046055, z: -0.0000018533319}
---- !u!114 &3535956425975572012
+--- !u!114 &-2792813717901263257
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,8 +115,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3493048315491332693}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 974a503da23261244b2be7c98bea4ef3, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fd5ea192fd8cbe4c87cbffd162adf0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_type: 0
-  m_sound: {fileID: 8300000, guid: ec3b9e29d9f2a484daa0c7d08c7e1c6b, type: 3}
+  m_normalSound: {fileID: 8300000, guid: 26fc0d11a2cb619498c56afee605601b, type: 3}
+  m_anomalySound: {fileID: 8300000, guid: 9a6b26423cd8fe44ba0774e7c25a136a, type: 3}
+  m_volume: 0.3

@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e95eeab2e1474449feec2d773e8c7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_firstScene: 1
+  m_firstScene: 0
 --- !u!1 &224699083
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,8 +199,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_soundList:
   - type: 0
-    sound: {fileID: 0}
-    volume: 0
+    sound: {fileID: 8300000, guid: af9209e668d8e764dbe9750594593412, type: 3}
+    volume: 0.4
   - type: 1
     sound: {fileID: 8300000, guid: c3e5237c2f16ea049b88e5e2151fd98b, type: 3}
     volume: 0
