@@ -15,6 +15,8 @@ public class RoomGenerator : MonoBehaviour
 
     static public RoomGenerator Instance　=> m_instance;
 
+    public int PropsIndex => m_roomPrefab.GetComponent<RoomController>().PropsIndex;
+
     private void Awake()
     {
         //シングルトン
@@ -30,12 +32,9 @@ public class RoomGenerator : MonoBehaviour
         GameObject room = Instantiate(m_roomPrefab, new Vector3(0, 0, RoomWidth * m_createCount), Quaternion.Euler(0, 180, 0));
         room.transform.parent = transform;
         m_createCount++;
-
-        //次の部屋を生成
-        Create();
     }
 
-    public void Create()
+    public void Create(int index)
     {
         //現在の部屋を取得
         int roomIndex = m_createCount <= MaxRoomNum ? m_createCount - 1 : MaxRoomNum - 1;
@@ -55,7 +54,7 @@ public class RoomGenerator : MonoBehaviour
         m_createCount++;
 
         //異変を配置
-        room.GetComponent<RoomController>().SetAnomaly();
+        room.GetComponent<RoomController>().SetAnomaly(index);
 
         //古い部屋を削除
         if (transform.childCount > MaxRoomNum)

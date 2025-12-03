@@ -1,3 +1,4 @@
+ï»¿using System.Collections.Generic;
 using UnityEngine;
 
 enum TextType
@@ -15,43 +16,75 @@ public class GameSceneManager : MonoBehaviour
     static public GameSceneManager Instance => m_instance;
 
     private const int MaxRoomIndex = 6;
+    private List<int> m_indexList;
     private int m_currentRoomIndex;
 
     public int CurrentRoomIndex => m_currentRoomIndex;
 
     private void Awake()
     {
-        //ƒVƒ“ƒOƒ‹ƒgƒ“
+        //ã‚·ãƒ³ã‚°ãƒ«ãƒˆãƒ³
         if (m_instance == null) m_instance = this;
 
-        //‰Šú‰»
+        //åˆæœŸåŒ–
         m_currentRoomIndex = 1;
+        m_indexList = new List<int>();
     }
 
     private void Start()
     {
-        //Å‰‚Ì•”‰®‚ğ¶¬
+        //æœ€åˆã®éƒ¨å±‹ã‚’ç”Ÿæˆ
         RoomGenerator.Instance.Initialize();
+
+        //æ¬¡ã®éƒ¨å±‹ã‚’ç”Ÿæˆ
+        RoomGenerator.Instance.Create(SelectIndex());
     }
+
+    private int SelectIndex()
+    {
+        //ãƒªã‚¹ãƒˆãŒç©ºãªã‚‰åˆæœŸåŒ–
+        if (m_indexList.Count == 0)
+        {
+            int count = RoomGenerator.Instance.PropsIndex;
+            m_indexList = new List<int>(count);
+
+            for (int i = 0; i < count; i++)
+            {
+                m_indexList.Add(i);
+            }
+        }
+
+        //ãƒ©ãƒ³ãƒ€ãƒ ã§é¸æŠ
+        int index = Random.Range(0, m_indexList.Count);
+
+        //å€¤ã‚’å–å¾—
+        int value = m_indexList[index];
+
+        //ãƒªã‚¹ãƒˆã‹ã‚‰å‰Šé™¤
+        m_indexList.RemoveAt(index);
+
+        return value;
+    }
+
 
     public void DeleteObject(ObjectType type)
     {
-        //³‰ğ‚µ‚½‚çŸ‚Ì•”‰®‚Ö
+        //æ­£è§£ã—ãŸã‚‰æ¬¡ã®éƒ¨å±‹ã¸
         if(type == ObjectType.Anomaly)
         {
             m_currentRoomIndex++;
         }
 
-        //•”‰®”‚ÌãŒÀ‚É’B‚µ‚Ä‚¢‚é‚©
+        //éƒ¨å±‹æ•°ã®ä¸Šé™ã«é”ã—ã¦ã„ã‚‹ã‹
         if (m_currentRoomIndex > MaxRoomIndex)
         {
-            //ÅŒã‚Ì•”‰®‚ğ¶¬
+            //æœ€å¾Œã®éƒ¨å±‹ã‚’ç”Ÿæˆ
             RoomGenerator.Instance.Innermost();
         }
         else 
         {
-            //‘±‚«‚Ì•”‰®‚ğ¶¬
-            RoomGenerator.Instance.Create();
+            //ç¶šãã®éƒ¨å±‹ã‚’ç”Ÿæˆ
+            RoomGenerator.Instance.Create(SelectIndex());
         }
     }
 

@@ -8,10 +8,11 @@ public class RoomController : MonoBehaviour
     [SerializeField] TextMeshProUGUI m_uiRoomNumber;
     [SerializeField] DoorController m_door;
 
-    public void SetAnomaly()
+    public int PropsIndex => m_anomalyProps.Length;
+
+    public void SetAnomaly(int index)
     {
         //ˆÙ•Ï‚ğ”z’u
-        int index = Random.Range(0, m_anomalyProps.Length);
         m_anomalyProps[index].Type = ObjectType.Anomaly;
 
         //•”‰®”Ô†‚Ì•\¦
