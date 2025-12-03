@@ -40,11 +40,5 @@ public class DoorController : MonoBehaviour
 
         //アニメーションの更新
         m_animator.SetBool("Open", m_isOpen);
-
-        //最深部のドアが開いたらリザルトシーンに遷移
-        if (m_isOpen && transform.root.CompareTag("InnermostRoom"))
-        {
-            SceneController.Transition(SceneType.Game, SceneType.Result);
-        }
     }
 }

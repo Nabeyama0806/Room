@@ -15,7 +15,7 @@ public class GameSceneManager : MonoBehaviour
 
     static public GameSceneManager Instance => m_instance;
 
-    private const int MaxRoomIndex = 6;
+    private const int MaxRoomIndex = 2;
     private List<int> m_indexList;
     private int m_currentRoomIndex;
 
@@ -86,10 +86,5 @@ public class GameSceneManager : MonoBehaviour
             //続きの部屋を生成
             RoomGenerator.Instance.Create(SelectIndex());
         }
-    }
-
-    public void SceneChange(SceneType nextScene)
-    {
-        SceneController.Transition(SceneType.Game, nextScene);
     }
 }
