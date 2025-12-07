@@ -1,30 +1,50 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class ResultSceneManager : MonoBehaviour
+public class ResultSceneController : MonoBehaviour
 {
-    [SerializeField] PlayData m_playData;
+    private const float StayTime = 1.5f; //入力受付するまでの待機時間
 
-    [SerializeField] List<TextMeshProUGUI> m_testList;
+    [SerializeField] private InputAction startAction;
+
+    private float m_timer;          //経過時間
+    private bool m_isInputEnabled;  //入力受付可能フラグ
 
     private void Start()
     {
-        //結果表示
-        m_testList[1].text = m_playData.roomNumber.ToString();
-        m_testList[2].text = m_playData.playTime.ToString("F1");
-
-        //シーン遷移
-        StartCoroutine(SceneChange());
+        m_timer = 0f;
+        m_isInputEnabled = false;
     }
 
-    private IEnumerator SceneChange()
+    private void Update()
     {
-        //3秒待機
-        yield return new WaitForSeconds(3.0f);
+        if (!m_isInputEnabled)
+        {
+            m_timer += Time.deltaTime;
+            if (m_timer >= StayTime)
+            {
+                m_isInputEnabled = true;
+            }
+        }
+    }
 
-        //シーン遷移
+    private void OnEnable()
+    {
+        startAction.performed += OnStart;
+        startAction.Enable();
+    }
+
+    private void OnDisable()
+    {
+        startAction.performed -= OnStart;
+        startAction.Disable();
+    }
+
+    private void OnStart(InputAction.CallbackContext context)
+    {
+        //入力受付可能でなければ処理しない
+        if (!m_isInputEnabled) return;
+
         SceneController.Transition(SceneType.Result, SceneType.Title);
     }
 }

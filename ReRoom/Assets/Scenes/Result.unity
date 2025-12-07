@@ -407,11 +407,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 888bb57b417de2a469a93ff560866c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_playData: {fileID: 11400000, guid: 427026a29c845354f912c605abe17a5b, type: 2}
-  m_testList:
-  - {fileID: 1662546976}
-  - {fileID: 741550743}
-  - {fileID: 1446377469}
+  startAction:
+    m_Name: Start
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: ed4162f3-26c1-44cd-9adf-78456f45f89d
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: b494e1c8-b115-4558-a69c-55748baf4c76
+      m_Path: <Keyboard>/anyKey
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Start
+      m_Flags: 0
+    - m_Name: 
+      m_Id: ca8e78a9-4b8a-45e3-9c8a-a59ee0f71571
+      m_Path: <Mouse>/clickCount
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Start
+      m_Flags: 0
+    m_Flags: 0
 --- !u!1 &741550741
 GameObject:
   m_ObjectHideFlags: 0
