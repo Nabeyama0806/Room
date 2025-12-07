@@ -69,6 +69,7 @@ public class RoomGenerator : MonoBehaviour
         transform.GetChild(transform.childCount - 1).GetComponent<RoomController>().DoorOpen();
 
         //V‚½‚É•”‰®‚ğ¶¬
-        Instantiate(m_innermostRoom, new Vector3(0, 0, RoomWidth * m_createCount), Quaternion.Euler(0, 180, 0));
+        GameObject room = Instantiate(m_innermostRoom, new Vector3(0, 0, RoomWidth * m_createCount), Quaternion.Euler(0, 180, 0));
+        room.transform.parent = transform;
     }
 }
