@@ -34,9 +34,6 @@ public class SoundSwap : Props
         //オーディオの再生位置を保存
         GameSceneManager.Instance.TimeSample = m_audio.timeSamples;
 
-        //オーディオを削除
-        Destroy(m_audio);
-
         //更新不要に設定
         m_needsUpdate = false;
     }
