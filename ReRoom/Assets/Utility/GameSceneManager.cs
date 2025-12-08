@@ -1,14 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-enum TextType
-{ 
-    DeleteCount,
-    RoomCount,
-
-    Length,
-}
-
 public class GameSceneManager : MonoBehaviour
 {
     static GameSceneManager m_instance;
@@ -18,8 +10,15 @@ public class GameSceneManager : MonoBehaviour
     private const int MaxRoomIndex = 6;
     private List<int> m_indexList;
     private int m_currentRoomIndex;
+    private int m_timeSample;
 
     public int CurrentRoomIndex => m_currentRoomIndex;
+
+    public int TimeSample
+    { 
+        get { return m_timeSample; }
+        set { m_timeSample = value; }
+    }
 
     private void Awake()
     {

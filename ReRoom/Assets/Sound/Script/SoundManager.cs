@@ -12,17 +12,17 @@ public class SoundManager
         PlaySe(clip, Vector3.zero, 0, volume, pitch, false);
     }
 
-    static public GameObject PlayLoop3D(AudioClip clip, Vector3 position, float volume = 1, float pitch = 1)
+    static public AudioSource PlayLoop3D(AudioClip clip, Vector3 position, float volume = 1, float pitch = 1)
     {
         return PlaySe(clip, position, 1, volume, pitch, true);
     }
 
-    static public GameObject PlayLoop2D(AudioClip clip, float volume = 1, float pitch = 1)
+    static public AudioSource PlayLoop2D(AudioClip clip, float volume = 1, float pitch = 1)
     {
         return PlaySe(clip, Vector3.zero, 0, volume, pitch, true);
     }
 
-    static GameObject PlaySe(AudioClip clip, Vector3 position, float spatialBlend, float volume, float pitch, bool isLoop)
+    static AudioSource PlaySe(AudioClip clip, Vector3 position, float spatialBlend, float volume, float pitch, bool isLoop)
     {
         GameObject obj = new GameObject(clip.name);
 
@@ -40,6 +40,6 @@ public class SoundManager
         if (!isLoop) MonoBehaviour.Destroy(obj, clip.length * (1.0f / pitch));
 
         //再生停止用にオブジェクトを返す
-        return obj;
+        return audio;
     }
 }

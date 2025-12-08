@@ -5,13 +5,13 @@ public class StrangeSound : Props
     [SerializeField] AudioClip m_sound;
     [SerializeField] float m_volume = 0.5f;
 
-    private GameObject m_soundObject;
+    private AudioSource m_audio;
 
     protected override void StartExecute()
     {
         //ÉãÅ[Évçƒê∂
-        m_soundObject = SoundManager.PlayLoop3D(m_sound, transform.position, m_volume);
-        m_soundObject.transform.parent = transform;
+        m_audio = SoundManager.PlayLoop3D(m_sound, transform.position, m_volume);
+        m_audio.transform.parent = transform;
     }
 
     private void FixedUpdate()
@@ -19,7 +19,7 @@ public class StrangeSound : Props
         //å≈íËâªÇ≥ÇÍÇΩÇÁçƒê∂Çí‚é~
         if (Type == ObjectType.Lock)
         {
-            Destroy(m_soundObject);
+            Destroy(m_audio);
         }
     }
 }
