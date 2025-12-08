@@ -5,14 +5,24 @@ public class GameSceneManager : MonoBehaviour
 {
     static GameSceneManager m_instance;
 
-    static public GameSceneManager Instance => m_instance;
-
     private const int MaxRoomIndex = 6;
+
     private List<int> m_indexList;
     private int m_currentRoomIndex;
+    private int m_totalLoopCount;
     private int m_timeSample;
+    private float m_playTime;
+    private bool m_isPlaying;
+
+    static public GameSceneManager Instance => m_instance;
+
+    public int MaxRoom => MaxRoomIndex;
 
     public int CurrentRoomIndex => m_currentRoomIndex;
+
+    public int TotalLoopCount => m_totalLoopCount;
+
+    public float PlayTime => m_playTime;
 
     public int TimeSample
     { 
@@ -26,7 +36,9 @@ public class GameSceneManager : MonoBehaviour
         if (m_instance == null) m_instance = this;
 
         //初期化
+        m_totalLoopCount = 0;
         m_currentRoomIndex = 1;
+        m_isPlaying = true;
         m_indexList = new List<int>();
     }
 
@@ -37,6 +49,15 @@ public class GameSceneManager : MonoBehaviour
 
         //次の部屋を生成
         RoomGenerator.Instance.Create(SelectIndex());
+    }
+
+    private void Update()
+    {
+        //プレイ中なら時間をカウント
+        if (m_isPlaying)
+        {
+            m_playTime += Time.deltaTime;
+        }
     }
 
     private int SelectIndex()
@@ -68,17 +89,23 @@ public class GameSceneManager : MonoBehaviour
 
     public void DeleteObject(ObjectType type)
     {
+        //ループ回数をカウント
+        m_totalLoopCount++;
+
         //正解したら次の部屋へ
-        if(type == ObjectType.Anomaly)
+        if (type == ObjectType.Anomaly)
         {
             m_currentRoomIndex++;
         }
 
-        //部屋数の上限に達しているか
+        //クリア回数が最大値を超えているか
         if (m_currentRoomIndex > MaxRoomIndex)
         {
-            //最後の部屋を生成
-            RoomGenerator.Instance.Innermost();
+            //出口を生成
+            RoomGenerator.Instance.Exit();
+
+            //ゲームクリア
+            m_isPlaying = false;
         }
         else 
         {

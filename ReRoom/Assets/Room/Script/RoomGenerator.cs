@@ -5,8 +5,7 @@ public class RoomGenerator : MonoBehaviour
     static RoomGenerator m_instance;
 
     [SerializeField] GameObject m_roomPrefab;
-    [SerializeField] GameObject m_firstRoom;
-    [SerializeField] GameObject m_innermostRoom;
+    [SerializeField] GameObject m_exitPrefab;
 
     private const int RoomWidth = 16;
     private const int MaxRoomNum = 3;
@@ -63,13 +62,13 @@ public class RoomGenerator : MonoBehaviour
         }
     }
 
-    public void Innermost()
+    public void Exit()
     {
         //部屋のドアを開ける
         transform.GetChild(transform.childCount - 1).GetComponent<RoomController>().DoorOpen();
 
         //新たに部屋を生成
-        GameObject room = Instantiate(m_innermostRoom, new Vector3(0, 0, RoomWidth * m_createCount), Quaternion.Euler(0, 180, 0));
+        GameObject room = Instantiate(m_exitPrefab, new Vector3(0, 0, RoomWidth * m_createCount), Quaternion.Euler(0, 180, 0));
         room.transform.parent = transform;
     }
 }

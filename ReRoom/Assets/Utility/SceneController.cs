@@ -5,7 +5,6 @@ public enum SceneType
 {
     Title,
     Game,
-    Result,
     System,
 }
 
@@ -80,9 +79,6 @@ public class SceneController
 
             case SceneType.Game:
                 return "Game";
-
-            case SceneType.Result:
-                return "Result";
 
             case SceneType.System:
                 return "System";
