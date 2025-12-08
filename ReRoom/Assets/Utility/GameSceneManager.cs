@@ -44,10 +44,7 @@ public class GameSceneManager : MonoBehaviour
 
     private void Start()
     {
-        //最初の部屋を生成
-        RoomGenerator.Instance.Initialize();
-
-        //次の部屋を生成
+        //部屋を生成
         RoomGenerator.Instance.Create(SelectIndex());
     }
 

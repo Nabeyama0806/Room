@@ -14,12 +14,12 @@ public class StrangeSound : Props
         m_audio.transform.parent = transform;
     }
 
-    private void FixedUpdate()
+    public override void Lock()
     {
+        //Šî’êƒNƒ‰ƒX‚Ìˆ—‚ğÀs
+        base.Lock();
+
         //ŒÅ’è‰»‚³‚ê‚½‚çÄ¶‚ğ’â~
-        if (Type == ObjectType.Lock)
-        {
-            Destroy(m_audio);
-        }
+        Destroy(m_audio);
     }
 }

@@ -7,13 +7,9 @@ public class SoundSwap : Props
     [SerializeField] float m_volume = 0.25f;
 
     private AudioSource m_audio;
-    private bool m_needsUpdate;
 
     private void Start()
     {
-        //初期化
-        m_needsUpdate = Type != ObjectType.Lock;
-
         //ループ再生
         AudioClip sound = Type == ObjectType.Anomaly ? m_anomalySound : m_normalSound;
         m_audio = SoundManager.PlayLoop3D(sound, transform.position, m_volume);
@@ -21,21 +17,6 @@ public class SoundSwap : Props
 
         //再生位置を取得
         m_audio.timeSamples = GameSceneManager.Instance.TimeSample;
-    }
-
-    private void Update()
-    {
-        //更新が必要なければ処理を行わない
-        if (!m_needsUpdate) return;
-
-        //固定オブジェクトでなければ処理を行わない
-        if (Type != ObjectType.Lock) return;
-
-        //オーディオの再生位置を保存
-        GameSceneManager.Instance.TimeSample = m_audio.timeSamples;
-
-        //更新不要に設定
-        m_needsUpdate = false;
     }
 
     public override void Hit()
@@ -48,5 +29,14 @@ public class SoundSwap : Props
 
         //オブジェクトを非表示にする
         gameObject.SetActive(false);
+    }
+
+    public override void Lock()
+    {
+        //基底クラスの処理を実行
+        base.Lock();
+
+        //オーディオの再生位置を保存
+        GameSceneManager.Instance.TimeSample = m_audio.timeSamples;
     }
 }

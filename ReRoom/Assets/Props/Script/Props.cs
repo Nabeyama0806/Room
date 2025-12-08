@@ -4,7 +4,6 @@ public enum ObjectType
 {
     Normal,     //通常
     Anomaly,    //異常
-    Lock,       //固定
 
     Length,
 }
@@ -21,6 +20,9 @@ public enum Rotate
 public class Props : MonoBehaviour
 {
     [SerializeField] ObjectType m_type = ObjectType.Normal;
+    [SerializeField] bool m_isLock = false;
+
+    public bool IsLock => m_isLock;
 
     public ObjectType Type
     {
@@ -59,5 +61,11 @@ public class Props : MonoBehaviour
 
         //オブジェクトを非表示にする
         gameObject.SetActive(false);
+    }
+
+    //固定化されたときの共通処理
+    public virtual void Lock() 
+    {
+        m_isLock = true;
     }
 }

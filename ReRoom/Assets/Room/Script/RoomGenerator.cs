@@ -22,15 +22,7 @@ public class RoomGenerator : MonoBehaviour
         if (m_instance == null) m_instance = this;
 
         //‰Šú‰»
-        m_createCount = 0;
-    }
-
-    public void Initialize()
-    {
-        //Å‰‚Ì•”‰®‚ğ¶¬
-        GameObject room = Instantiate(m_roomPrefab, new Vector3(0, 0, RoomWidth * m_createCount), Quaternion.Euler(0, 180, 0));
-        room.transform.parent = transform;
-        m_createCount++;
+        m_createCount = 1;
     }
 
     public void Create(int index)

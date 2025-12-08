@@ -28,12 +28,12 @@ public class RoomController : MonoBehaviour
     {
         foreach (var prop in m_normalProps)
         {
-            prop.Type = ObjectType.Lock;
+            prop.Lock();
         }
 
         foreach (var prop in m_anomalyProps)
         {
-            prop.Type = ObjectType.Lock;
+            prop.Lock();
         }
     }
 }

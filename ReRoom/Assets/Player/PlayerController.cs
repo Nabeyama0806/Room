@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
             if (!hit.transform.transform.TryGetComponent<Props>(out var props)) return;
 
             //固定のオブジェクトは無視する
-            if (props.Type == ObjectType.Lock) return;
+            if (props.IsLock) return;
 
             //弾の発射
             m_revolver.GetComponent<RevolverController>().Shot(hit.point);
