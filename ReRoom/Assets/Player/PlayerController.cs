@@ -83,6 +83,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnShot(InputAction.CallbackContext context)
     {
+        //オーキャン
+
         //銃を撃つ
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out var hit))
         {

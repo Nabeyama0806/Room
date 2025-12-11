@@ -59,6 +59,12 @@ public class GameSceneManager : MonoBehaviour
 
     private int SelectIndex()
     {
+        //オーキャン
+
+        //値の初期化
+        int index = 0;
+        int value = 0;
+
         //リストが空なら初期化
         if (m_indexList.Count == 0)
         {
@@ -72,10 +78,10 @@ public class GameSceneManager : MonoBehaviour
         }
 
         //ランダムで選択
-        int index = Random.Range(0, m_indexList.Count);
+        index = Random.Range(0, m_indexList.Count);
 
         //値を取得
-        int value = m_indexList[index];
+        value = m_indexList[index];
 
         //リストから削除
         m_indexList.RemoveAt(index);
