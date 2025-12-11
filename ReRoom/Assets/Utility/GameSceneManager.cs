@@ -89,19 +89,26 @@ public class GameSceneManager : MonoBehaviour
         return value;
     }
 
-
     public void DeleteObject(ObjectType type)
     {
         //ループ回数をカウント
         m_totalLoopCount++;
 
-        //正解したら次の部屋へ
+        //異変を削除したら部屋数を加算
         if (type == ObjectType.Anomaly)
         {
             m_currentRoomIndex++;
         }
 
-        //クリア回数が最大値を超えているか
+        //クリアチェック
+        Check();
+    }
+
+    public void Check()
+    {
+        //オーキャン
+
+        //クリア回数に応じて処理を分岐
         if (m_currentRoomIndex > MaxRoomIndex)
         {
             //出口を生成
@@ -110,7 +117,7 @@ public class GameSceneManager : MonoBehaviour
             //ゲームクリア
             m_isPlaying = false;
         }
-        else 
+        else
         {
             //続きの部屋を生成
             RoomGenerator.Instance.Create(SelectIndex());
