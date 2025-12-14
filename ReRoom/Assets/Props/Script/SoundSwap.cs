@@ -16,7 +16,11 @@ public class SoundSwap : Props
         m_audio.transform.parent = transform;
 
         //Ä¶ˆÊ’u‚ğæ“¾
-        m_audio.timeSamples = GameSceneManager.Instance.TimeSample;
+        m_audio.timeSamples = Mathf.Clamp(
+            GameSceneManager.Instance.TimeSample,
+            0,
+            m_audio.clip.samples - 1
+            );
     }
 
     public override void Hit()

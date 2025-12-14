@@ -84,6 +84,9 @@ public class PlayerController : MonoBehaviour
     {
         //オーキャン
 
+        //カーソルが出ていれば撃てない
+        if (Cursor.lockState == CursorLockMode.None) return;
+
         //銃を撃つ
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out var hit))
         {

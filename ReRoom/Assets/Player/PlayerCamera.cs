@@ -13,7 +13,7 @@ public class PlayerCamera : MonoBehaviour
     private void Awake()
     {
         m_pov = m_virtualCamera.GetCinemachineComponent<CinemachinePOV>();
-        m_sensitivity = 30.0f;
+        m_sensitivity = 20.0f;
     }
 
     private void OnEnable()

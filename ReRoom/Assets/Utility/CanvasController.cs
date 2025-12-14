@@ -3,41 +3,47 @@ using UnityEngine.InputSystem;
 
 public class CanvasController : MonoBehaviour
 {
-    [SerializeField] GameObject m_slider;
+    [SerializeField] GameObject m_ui;
     [SerializeField] InputAction m_action;
-
-    bool m_isOpen;
 
     private void OnEnable()
     {
         m_action.Enable();
-        m_action.performed += OnToggleUI;
+        m_action.performed += OnOpenUI;
     }
 
     private void OnDisable()
     {
-        m_action.performed -= OnToggleUI;
+        m_action.performed -= OnOpenUI;
         m_action.Disable();
     }
 
     private void Start()
     {
         // 初期状態は非表示
-        m_slider.SetActive(false);
-        m_isOpen = false;
+        m_ui.SetActive(false);
     }
 
-    void OnToggleUI(InputAction.CallbackContext context)
+    private void OnOpenUI(InputAction.CallbackContext context)
+    {
+        ToggleUI(true);
+    }
+
+    public void OnCloseUI()
+    {
+        ToggleUI(false);
+    }
+
+    private void ToggleUI(bool flag)
     {
         //UIの表示/非表示
-        m_isOpen = !m_isOpen;
-        m_slider.SetActive(m_isOpen);
+        m_ui.SetActive(flag);
 
         //カーソル
-        Cursor.lockState = m_isOpen ? CursorLockMode.None : CursorLockMode.Locked;
-        Cursor.visible = m_isOpen;
+        Cursor.visible = flag;
+        Cursor.lockState = flag ? CursorLockMode.None : CursorLockMode.Locked;
 
-        //表示中はゲームを停止
-        GameSceneManager.Instance.IsPaused = m_isOpen;
+        //表示中ならプレイヤーの操作を停止
+        GameSceneManager.Instance.IsPaused = flag;
     }
 }
