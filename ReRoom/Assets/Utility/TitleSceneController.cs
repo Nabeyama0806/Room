@@ -5,7 +5,7 @@ public class TitleSceneController : MonoBehaviour
 {
     private const float StayTime = 1.5f; //入力受付するまでの待機時間
 
-    [SerializeField] private InputAction startAction;
+    [SerializeField] private InputAction m_startAction;
 
     private float m_timer;          //経過時間
     private bool m_isInputEnabled;  //入力受付可能フラグ
@@ -30,14 +30,14 @@ public class TitleSceneController : MonoBehaviour
 
     private void OnEnable()
     {
-        startAction.performed += OnStart;
-        startAction.Enable();
+        m_startAction.performed += OnStart;
+        m_startAction.Enable();
     }
 
     private void OnDisable()
     {
-        startAction.performed -= OnStart;
-        startAction.Disable();
+        m_startAction.performed -= OnStart;
+        m_startAction.Disable();
     }
 
     private void OnStart(InputAction.CallbackContext context)
@@ -45,6 +45,11 @@ public class TitleSceneController : MonoBehaviour
         //入力受付可能でなければ処理しない
         if (!m_isInputEnabled) return;
 
+        //カーソルを消して中央に固定
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
+        //シーン遷移
         SceneController.Transition(SceneType.Title, SceneType.Game);
     }
 }

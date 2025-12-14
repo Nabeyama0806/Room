@@ -15,10 +15,6 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
-        //カーソルを消して中央に固定
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-
         //コンポーネントの取得
         m_characterController = GetComponent<CharacterController>();
         m_playerInput = GetComponent<PlayerInput>();
@@ -26,6 +22,9 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //設定画面を開いていれば移動不可
+        if (GameSceneManager.Instance.IsPaused) return;
+
         //カメラの向きに合わせて移動方向を決定
         Vector3 cameraForward = Vector3.Scale(Camera.main.transform.forward, new Vector3(1, 0, 1)).normalized;
         Vector3 moveVelocity = cameraForward * m_inputValue.z + Camera.main.transform.right * m_inputValue.x;

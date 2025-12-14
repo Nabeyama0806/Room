@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameSceneManager : MonoBehaviour
 {
-    static GameSceneManager m_instance;
+    static private GameSceneManager m_instance;
 
     private const int MaxRoomIndex = 6;
 
@@ -13,6 +13,7 @@ public class GameSceneManager : MonoBehaviour
     private int m_timeSample;
     private float m_playTime;
     private bool m_isPlaying;
+    private bool m_isPaused;
 
     static public GameSceneManager Instance => m_instance;
 
@@ -30,6 +31,12 @@ public class GameSceneManager : MonoBehaviour
         set { m_timeSample = value; }
     }
 
+    public bool IsPaused
+    {
+        get { return m_isPaused; }
+        set { m_isPaused = value; }
+    }
+
     private void Awake()
     {
         //シングルトン
@@ -39,6 +46,7 @@ public class GameSceneManager : MonoBehaviour
         m_totalLoopCount = 0;
         m_currentRoomIndex = 1;
         m_isPlaying = true;
+        m_isPaused = false;
         m_indexList = new List<int>();
     }
 

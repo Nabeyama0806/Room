@@ -13521,16 +13521,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2332e3f5596b9a84db24a5235a2c7855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startAction:
+  m_startAction:
     m_Name: Start
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: ca8b5694-b04f-44d6-8f97-dafa560687db
+    m_Id: 2c0d2e89-62d8-4505-9501-25875350c25a
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: 10725ead-5c76-4108-b394-c21cad5f19a5
+      m_Id: 8d11e6fb-baef-45b8-aa09-c6033416f50d
       m_Path: <Keyboard>/anyKey
       m_Interactions: 
       m_Processors: 
@@ -13538,8 +13538,16 @@ MonoBehaviour:
       m_Action: Start
       m_Flags: 0
     - m_Name: 
-      m_Id: fce34935-1329-426d-b0a1-8a07f275f463
-      m_Path: <Mouse>/clickCount
+      m_Id: 85e48290-ff54-405b-96df-b7c2048c9c69
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Start
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 27cf5fdd-1ffd-4032-acb3-cac1af4c564d
+      m_Path: <Mouse>/rightButton
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -18158,6 +18166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_type: 1
+  m_isLock: 0
   m_target: {fileID: 1358385220}
   m_minInterval: 0.8
   m_maxInterval: 0.8
