@@ -36,7 +36,7 @@ public class RoomGenerator : MonoBehaviour
             roomCreate.Lock();
 
             //現在の部屋のドアを開ける
-            room.GetComponent<RoomController>().DoorOpen();
+            roomCreate.DoorOpen();
         }
 
         //新たに部屋を生成

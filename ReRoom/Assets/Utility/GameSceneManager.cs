@@ -97,22 +97,7 @@ public class GameSceneManager : MonoBehaviour
         return value;
     }
 
-    public void DeleteObject(ObjectType type)
-    {
-        //ループ回数をカウント
-        m_totalLoopCount++;
-
-        //異変を削除したら部屋数を加算
-        if (type == ObjectType.Anomaly)
-        {
-            m_currentRoomIndex++;
-        }
-
-        //クリアチェック
-        Check();
-    }
-
-    public void Check()
+    private void Check()
     {
         //オーキャン
 
@@ -130,5 +115,20 @@ public class GameSceneManager : MonoBehaviour
             //続きの部屋を生成
             RoomGenerator.Instance.Create(SelectIndex());
         }
+    }
+
+    public void DeleteObject(ObjectType type)
+    {
+        //ループ回数をカウント
+        m_totalLoopCount++;
+
+        //異変を削除したら部屋数を加算
+        if (type == ObjectType.Anomaly)
+        {
+            m_currentRoomIndex++;
+        }
+
+        //クリアチェック
+        Check();
     }
 }
