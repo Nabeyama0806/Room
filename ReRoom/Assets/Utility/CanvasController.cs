@@ -4,18 +4,25 @@ using UnityEngine.InputSystem;
 public class CanvasController : MonoBehaviour
 {
     [SerializeField] GameObject m_ui;
-    [SerializeField] InputAction m_action;
+    [SerializeField] InputAction m_openAction;
+    [SerializeField] InputAction m_closeAction;
 
     private void OnEnable()
     {
-        m_action.Enable();
-        m_action.performed += OnOpenUI;
+        m_openAction.Enable();
+        m_closeAction.Enable();
+
+        m_openAction.performed += OnOpenUI;
+        m_closeAction.performed += OnCloseUI;
     }
 
     private void OnDisable()
     {
-        m_action.performed -= OnOpenUI;
-        m_action.Disable();
+        m_openAction.performed -= OnOpenUI;
+        m_closeAction.performed -= OnCloseUI;
+
+        m_openAction.Disable();
+        m_closeAction.Disable();
     }
 
     private void Start()
@@ -29,7 +36,12 @@ public class CanvasController : MonoBehaviour
         ToggleUI(true);
     }
 
-    public void OnCloseUI()
+    private void OnCloseUI(InputAction.CallbackContext context)
+    {
+        ToggleUI(false);
+    }
+
+    public void OnClick()
     {
         ToggleUI(false);
     }

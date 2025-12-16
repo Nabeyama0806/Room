@@ -4,18 +4,22 @@ using UnityEngine.InputSystem;
 
 public class PlayerCamera : MonoBehaviour
 {
+    private const float ReferenceBaseSensitivity = 60.0f;
+    
     [SerializeField] CinemachineVirtualCamera m_virtualCamera;
     [SerializeField] InputActionProperty m_lookAction;
-    [SerializeField] float m_baseSensitivity = 10f;
+    [SerializeField] float m_baseSensitivity;
 
-    private float m_referenceBaseSensitivity = 50f;
-    private float m_referenceMouseSensitivity = 10f;
-    private float m_referenceGamepadSensitivity = 80f;
+    private float m_referenceMouseSensitivity;
+    private float m_referenceGamepadSensitivity;
     private CinemachinePOV m_pov;
 
     private void Awake()
     {
         m_pov = m_virtualCamera.GetCinemachineComponent<CinemachinePOV>();
+
+        m_referenceMouseSensitivity = 100.0f;
+        m_referenceGamepadSensitivity = 400.0f;
     }
 
     private void OnEnable()
@@ -45,22 +49,26 @@ public class PlayerCamera : MonoBehaviour
         }        
     }
 
-    float GetDeviceSensitivity()
+    private float GetDeviceSensitivity()
     {
         //入力デバイスの取得
         var control = m_lookAction.action.activeControl;
 
         //基本感度
-        float scale = m_baseSensitivity / m_referenceBaseSensitivity;
-        float baseDeviceSensitivity = m_referenceMouseSensitivity;
+        float scale = m_baseSensitivity / ReferenceBaseSensitivity;
+        float baseDeviceSensitivity = 0;
 
-        //マウス
-        if (control.device is Mouse) baseDeviceSensitivity = m_referenceMouseSensitivity;
+        if (control != null)
+        {
+            //マウス感度
+            if (control.device is Mouse) baseDeviceSensitivity = m_referenceMouseSensitivity;
 
-        //ゲームパッド
-        if (control.device is Gamepad) baseDeviceSensitivity = m_referenceGamepadSensitivity;
+            //ゲームパッド感度
+            if (control.device is Gamepad) baseDeviceSensitivity = m_referenceGamepadSensitivity;
+        }
 
         return baseDeviceSensitivity * scale;
+
     }
 
     // UI用

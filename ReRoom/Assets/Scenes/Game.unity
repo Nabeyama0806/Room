@@ -155,7 +155,7 @@ RectTransform:
   m_Father: {fileID: 1587314629}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.2, y: 1}
+  m_AnchorMax: {x: 0.47368422, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -260,8 +260,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1186383784}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.2, y: 0}
-  m_AnchorMax: {x: 0.2, y: 1}
+  m_AnchorMin: {x: 0.47368422, y: 0}
+  m_AnchorMax: {x: 0.47368422, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -383,7 +383,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
-  m_LocalPosition: {x: -2, y: 1.5, z: -7}
+  m_LocalPosition: {x: -2, y: 1.75, z: -6.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -543,7 +543,7 @@ Transform:
   m_GameObject: {fileID: 385767013}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
-  m_LocalPosition: {x: -2, y: 1.5, z: -7}
+  m_LocalPosition: {x: -2, y: 1.75, z: -6.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -591,7 +591,7 @@ MonoBehaviour:
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
-  m_sensitivity: 200
+  m_baseSensitivity: 10
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,6 +827,7 @@ GameObject:
   m_Component:
   - component: {fileID: 518020636}
   - component: {fileID: 518020637}
+  - component: {fileID: 518020638}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -900,16 +901,16 @@ MonoBehaviour:
   m_FillRect: {fileID: 4846}
   m_HandleRect: {fileID: 324303988}
   m_Direction: 0
-  m_MinValue: 5
-  m_MaxValue: 80
+  m_MinValue: 1
+  m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 20
+  m_Value: 10
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 385767016}
         m_TargetAssemblyTypeName: PlayerCamera, Assembly-CSharp
-        m_MethodName: SetSensitivity
+        m_MethodName: SetBaseSensitivity
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -919,6 +920,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &518020638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518020635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ea9e16810105384097c582a04d50433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &613888171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,7 +1173,7 @@ PrefabInstance:
     - target: {fileID: 311208944949476706, guid: 704366329b88c4747818f1a9ed761d01,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1
+      value: -1.8499999
       objectReference: {fileID: 0}
     - target: {fileID: 311208944949476706, guid: 704366329b88c4747818f1a9ed761d01,
         type: 3}
@@ -1351,7 +1364,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1700902238}
         m_TargetAssemblyTypeName: CanvasController, Assembly-CSharp
-        m_MethodName: OnCloseUI
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2116,7 +2129,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 1
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -2155,21 +2168,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ui: {fileID: 2100626855}
-  m_action:
-    m_Name: Action
+  m_openAction:
+    m_Name: Open
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 80fdde71-a014-408a-8e50-39f2c3845389
+    m_Id: 540ce708-3a64-4468-a1a2-c6d900d1df0f
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: 7ae6c498-e4e6-4bed-89d9-196ecadf61a9
+      m_Id: 9fed6fd0-462a-4517-90cf-1ff92cd8dbf7
       m_Path: <Keyboard>/escape
       m_Interactions: 
       m_Processors: 
       m_Groups: 
-      m_Action: Action
+      m_Action: Open
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 9343b0c6-7898-4988-b755-9795ebf7b6dd
+      m_Path: <Gamepad>/start
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Open
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 83a64ad5-1193-4ab5-a8c6-0801e6db61e5
+      m_Path: <XInputController>/start
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Open
+      m_Flags: 0
+    m_Flags: 0
+  m_closeAction:
+    m_Name: Close
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 571bc1dc-ff05-4cad-aa2d-1030540f33d5
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: aaa16311-1642-4fe0-87c8-8773bf6724fe
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Close
+      m_Flags: 0
+    - m_Name: 
+      m_Id: b39e1605-0e4a-48ab-9301-fea5542a6ee8
+      m_Path: <XInputController>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Close
       m_Flags: 0
     m_Flags: 0
 --- !u!1 &1757873243
@@ -10627,7 +10681,7 @@ Transform:
   m_GameObject: {fileID: 901240780807503200}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.192489, y: -3.5806746, z: -21.871696}
+  m_LocalPosition: {x: 3.192489, y: -3.5806746, z: -22.121696}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -45731,7 +45785,7 @@ PrefabInstance:
     - target: {fileID: 4114358182452901546, guid: 61de9b1dffe816f40904601e2929b7c6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7
+      value: -6.5
       objectReference: {fileID: 0}
     - target: {fileID: 4114358182452901546, guid: 61de9b1dffe816f40904601e2929b7c6,
         type: 3}
@@ -45771,7 +45825,7 @@ PrefabInstance:
     - target: {fileID: 5601602123444706263, guid: 61de9b1dffe816f40904601e2929b7c6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
