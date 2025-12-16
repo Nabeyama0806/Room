@@ -1,7 +1,10 @@
+using System.Collections;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class Shaking : Props
 {
+    [SerializeField] Material m_material;
     [SerializeField] float amplitude = 0.05f;       //基本揺れ幅
     [SerializeField] float speed = 1.2f;            //規則的揺れ速度
     [SerializeField] float noiseSpeed = 3.5f;       //不規則揺れ速度
@@ -48,4 +51,37 @@ public class Shaking : Props
         transform.localPosition = basePos + new Vector3(x, finalY - basePos.y, 0);
         transform.localRotation = Quaternion.Euler(0, 0, rot);
     }
+
+    public override void Hit()
+    {
+        //自身が削除されることを通知
+        GameSceneManager.Instance.DeleteObject(Type);
+
+        //ディゾルブの開始
+        StartCoroutine(Transition());
+    }
+
+    private IEnumerator Transition()
+    {
+        float duration = 0.5f;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / duration);
+
+            float value = Mathf.Lerp(0, 1, t);
+            m_material.SetFloat("_t", value);
+
+            yield return null;
+        }
+
+        //マテリアルを元に戻す
+        m_material.SetFloat("_t", 0);
+
+        //自身の削除
+        Destroy(gameObject);
+    }
+
 }
