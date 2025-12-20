@@ -67,40 +67,36 @@ public class GameSceneManager : MonoBehaviour
 
     private int SelectIndex()
     {
-        //オーキャン
-
         //値の初期化
         int index = 0;
         int value = 0;
 
-        ////リストが空なら初期化
-        //if (m_indexList.Count == 0)
-        //{
-        //    int count = RoomGenerator.Instance.PropsIndex;
-        //    m_indexList = new List<int>(count);
+        //リストが空なら初期化
+        if (m_indexList.Count == 0)
+        {
+            int count = RoomGenerator.Instance.PropsIndex;
+            m_indexList = new List<int>(count);
 
-        //    for (int i = 0; i < count; i++)
-        //    {
-        //        m_indexList.Add(i);
-        //    }
-        //}
+            for (int i = 0; i < count; i++)
+            {
+                m_indexList.Add(i);
+            }
+        }
 
-        ////ランダムで選択
-        //index = Random.Range(0, m_indexList.Count);
+        //ランダムで選択
+        index = Random.Range(0, m_indexList.Count);
 
-        ////値を取得
-        //value = m_indexList[index];
+        //値を取得
+        value = m_indexList[index];
 
-        ////リストから削除
-        //m_indexList.RemoveAt(index);
+        //リストから削除
+        m_indexList.RemoveAt(index);
 
         return value;
     }
 
     private void Check()
     {
-        //オーキャン
-
         //クリア回数に応じて処理を分岐
         if (m_currentRoomIndex > MaxRoomIndex)
         {

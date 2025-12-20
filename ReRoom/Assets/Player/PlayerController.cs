@@ -82,8 +82,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnShot(InputAction.CallbackContext context)
     {
-        //オーキャン
-
         //カーソルが出ていれば撃てない
         if (Cursor.lockState == CursorLockMode.None) return;
 
