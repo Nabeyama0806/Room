@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class Rotation : Props
 {
+    [SerializeField] GameObject m_target;
     [SerializeField] Rotate m_rotate;
     [SerializeField] float m_speed = 9;
 
     protected override void UpdateExecute()
     {
+        //‰ñ“]²‚ğ‘I‘ğ
         Vector3 axis = Vector3.zero;
-
-        // enum ‚Ì’l‚É‰‚¶‚Ä‰ñ“]²‚ğ‘I‘ğ
         switch (m_rotate)
         {
             case Rotate.X:
@@ -25,7 +25,7 @@ public class Rotation : Props
                 break;
         }
 
-        // ‰ñ“]ˆ—
-        transform.Rotate(axis * m_speed * Time.deltaTime);
+        //‰ñ“]ˆ—
+        m_target.transform.Rotate(axis * m_speed * Time.deltaTime);
     }
 }

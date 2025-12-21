@@ -7621,7 +7621,6 @@ MonoBehaviour:
   - {fileID: 8842593767620942260}
   - {fileID: 2300097689917686878}
   - {fileID: 5177864978495947646}
-  - {fileID: 0}
   m_anomalyProps:
   - {fileID: 6919332535664369912}
   - {fileID: 7302364248121137060}
@@ -10446,6 +10445,11 @@ PrefabInstance:
       propertyPath: m_speed
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 5940190919861884162, guid: 93b041ca22d236e4ea1d2e20eec02a12,
+        type: 3}
+      propertyPath: m_target
+      value: 
+      objectReference: {fileID: 3779975601532668030}
     - target: {fileID: 7332665129289182244, guid: 93b041ca22d236e4ea1d2e20eec02a12,
         type: 3}
       propertyPath: m_Name
@@ -10459,6 +10463,12 @@ PrefabInstance:
 --- !u!4 &2051683316791175305 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4338150254853067162, guid: 93b041ca22d236e4ea1d2e20eec02a12,
+    type: 3}
+  m_PrefabInstance: {fileID: 2327586638204991763}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3779975601532668030 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1456937017007468909, guid: 93b041ca22d236e4ea1d2e20eec02a12,
     type: 3}
   m_PrefabInstance: {fileID: 2327586638204991763}
   m_PrefabAsset: {fileID: 0}
