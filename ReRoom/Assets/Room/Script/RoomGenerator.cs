@@ -25,12 +25,12 @@ public class RoomGenerator : MonoBehaviour
         m_createCount = 1;
     }
 
-    public void Create(int index)
+    private void CurrentRoomSetting()
     {
         //現在の部屋を取得
         int roomIndex = m_createCount <= MaxRoomNum ? m_createCount - 1 : MaxRoomNum - 1;
         GameObject room = transform.GetChild(roomIndex).gameObject;
-        if (room.TryGetComponent(out RoomController roomCreate))
+        if (room.TryGetComponent<RoomController>(out var roomCreate))
         {
             //オブジェクトを固定する
             roomCreate.Lock();
@@ -38,9 +38,15 @@ public class RoomGenerator : MonoBehaviour
             //現在の部屋のドアを開ける
             roomCreate.DoorOpen();
         }
+    }
+
+    public void Create(int index)
+    {
+        //現在の部屋設定
+        CurrentRoomSetting();
 
         //新たに部屋を生成
-        room = Instantiate(m_roomPrefab, new Vector3(0, 0, RoomWidth * m_createCount), Quaternion.Euler(0, 180, 0));
+        GameObject room = Instantiate(m_roomPrefab, new Vector3(0, 0, RoomWidth * m_createCount), Quaternion.Euler(0, 180, 0));
         room.transform.parent = transform;
         m_createCount++;
 
@@ -56,10 +62,10 @@ public class RoomGenerator : MonoBehaviour
 
     public void Exit()
     {
-        //部屋のドアを開ける
-        transform.GetChild(transform.childCount - 1).GetComponent<RoomController>().DoorOpen();
+        //現在の部屋設定
+        CurrentRoomSetting();
 
-        //新たに部屋を生成
+        //出口の生成
         GameObject room = Instantiate(m_exitPrefab, new Vector3(0, 0, RoomWidth * m_createCount), Quaternion.Euler(0, 180, 0));
         room.transform.parent = transform;
     }
