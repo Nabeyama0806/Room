@@ -7621,6 +7621,7 @@ MonoBehaviour:
   - {fileID: 8842593767620942260}
   - {fileID: 2300097689917686878}
   - {fileID: 5177864978495947646}
+  - {fileID: 0}
   m_anomalyProps:
   - {fileID: 6919332535664369912}
   - {fileID: 7302364248121137060}

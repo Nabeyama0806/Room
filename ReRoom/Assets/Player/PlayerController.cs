@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out var hit))
         {
             //壁や床は無視する
-            if (!hit.transform.transform.TryGetComponent<Props>(out var props)) return;
+            if (!hit.transform.TryGetComponent<Props>(out var props)) return;
 
             //固定のオブジェクトは無視する
             if (props.IsLock) return;
