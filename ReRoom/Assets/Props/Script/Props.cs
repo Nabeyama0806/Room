@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public enum ObjectType
@@ -20,6 +21,7 @@ public enum Rotate
 public class Props : MonoBehaviour
 {
     [SerializeField] ObjectType m_type = ObjectType.Normal;
+    [SerializeField] Material[] m_materials;
     [SerializeField] bool m_isLock = false;
 
     public bool IsLock => m_isLock;
@@ -53,19 +55,51 @@ public class Props : MonoBehaviour
 
     protected virtual void UpdateExecute() { }
 
+    //固定化されたときの共通処理
+    public virtual void Lock()
+    {
+        m_isLock = true;
+    }
+
     //ヒットしたときの共通処理
     public virtual void Hit()
     {
         //自身が削除されることを通知
         GameSceneManager.Instance.DeleteObject(m_type);
 
-        //オブジェクトを非表示にする
-        gameObject.SetActive(false);
+        //ディゾルブの開始
+        StartCoroutine(Transition());
     }
 
-    //固定化されたときの共通処理
-    public virtual void Lock() 
+    //ディゾルブ処理
+    private IEnumerator Transition()
     {
-        m_isLock = true;
+        float duration = 0.5f;
+        float elapsed = 0f;
+
+        //ディゾルブの実行
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / duration);
+
+            float value = Mathf.Lerp(0, 1, t);
+
+            foreach (var material in m_materials)
+            {
+                material.SetFloat("_t", value);
+            }
+
+            yield return null;
+        }
+
+        //マテリアルを元に戻す
+        foreach (var material in m_materials)
+        {
+            material.SetFloat("_t", 0);
+        }
+
+        //自身の削除
+        Destroy(gameObject);
     }
 }

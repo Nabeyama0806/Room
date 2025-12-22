@@ -25,14 +25,11 @@ public class SoundSwap : Props
 
     public override void Hit()
     {
-        //自身が削除されることを通知
-        GameSceneManager.Instance.DeleteObject(Type);
-
         //オーディオの再生位置を保存
         GameSceneManager.Instance.TimeSample = m_audio.timeSamples;
 
-        //オブジェクトを非表示にする
-        gameObject.SetActive(false);
+        //基底クラスの処理を実行
+        base.Hit();
     }
 
     public override void Lock()

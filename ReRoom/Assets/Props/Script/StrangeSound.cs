@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class StrangeSound : Props
 {
+    [SerializeField] GameObject m_monitor;
     [SerializeField] AudioClip m_sound;
     [SerializeField] float m_volume = 0.5f;
 
@@ -9,6 +10,12 @@ public class StrangeSound : Props
 
     protected override void StartExecute()
     {
+        //モニターを消す
+        if (m_monitor != null)
+        {
+            Destroy(m_monitor);
+        }
+
         //ループ再生
         m_audio = SoundManager.PlayLoop3D(m_sound, transform.position, m_volume);
         m_audio.transform.parent = transform;
