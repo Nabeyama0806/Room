@@ -20,8 +20,9 @@ public enum Rotate
 
 public class Props : MonoBehaviour
 {
-    [SerializeField] ObjectType m_type = ObjectType.Normal;
     [SerializeField] Material[] m_materials;
+    [SerializeField] AudioClip m_hitSound;
+    [SerializeField] ObjectType m_type = ObjectType.Normal;
     [SerializeField] bool m_isLock = false;
 
     public bool IsLock => m_isLock;
@@ -66,6 +67,9 @@ public class Props : MonoBehaviour
     {
         //自身が削除されることを通知
         GameSceneManager.Instance.DeleteObject(m_type);
+
+        //効果音の再生
+        SoundManager.Play2D(m_hitSound, 0.3f);
 
         //ディゾルブの開始
         StartCoroutine(Transition());

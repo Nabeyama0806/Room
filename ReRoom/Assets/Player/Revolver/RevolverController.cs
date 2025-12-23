@@ -23,7 +23,7 @@ public class RevolverController : MonoBehaviour
         m_shotEffect.SetActive(true);
 
         //少し待機
-        yield return new WaitForSeconds(0.06f);
+        yield return new WaitForSeconds(0.2f);
 
         //エフェクトを非表示
         m_shotEffect.SetActive(false);
@@ -36,7 +36,7 @@ public class RevolverController : MonoBehaviour
         m_hitEffect.SetActive(true);
 
         //少し待機
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
 
         //エフェクトを削除
         m_hitEffect.SetActive(false);
