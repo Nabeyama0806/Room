@@ -123,6 +123,11 @@ public class GameSceneManager : MonoBehaviour
         {
             m_currentRoomIndex++;
         }
+        else
+        {
+            //通常オブジェクトなら部屋数をリセット
+            m_currentRoomIndex = 1;
+        }
 
         //クリアチェック
         Check();
